@@ -1,0 +1,17 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "team": "Our Team",
+    "indonesian": "Indonesia",
+    "english": "English"
+  },
+  "Home": {
+    "welcome": "Welcome to Our Website"
+  },
+  "Team": {
+    "back": "Back to Home",
+    "title": "Meet Our Founders",
+    "description": "Interact with our interactive digital badges. Drag, pull, and shake them to see the physics simulation in action."
+  }
+}
