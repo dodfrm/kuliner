@@ -18,5 +18,29 @@
   "Team": {
     "back": "Kembali ke Beranda",
     "title": "Berkenalan Dengan Kami"
+  },
+  "Regions": {
+    "back": "Kembali ke Beranda",
+    "dragHint": "Seret dan geser untuk menjelajah galeri 3D",
+    "bali": {
+      "title": "Kekayaan Kuliner Bali",
+      "subtitle": "Kelezatan kaya bumbu tradisional dari Pulau Dewata"
+    },
+    "jawa": {
+      "title": "Sajian Kuliner Jawa",
+      "subtitle": "Cita rasa otentik yang manis, gurih, dan legendaris"
+    },
+    "kalimantan": {
+      "title": "Cita Rasa Kalimantan",
+      "subtitle": "Keunikan hidangan khas sungai dan rempah Khatulistiwa"
+    },
+    "maluku": {
+      "title": "Eksotisme Kuliner Maluku & Papua",
+      "subtitle": "Pesona cita rasa rempah asli dan laut kepulauan timur"
+    },
+    "sumatera": {
+      "title": "Keagungan Kuliner Sumatera",
+      "subtitle": "Sensasi pedas, gurih, dan rempah tajam yang memanjakan lidah"
+    }
   }
 }

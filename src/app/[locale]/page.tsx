@@ -18,12 +18,12 @@ import { Link } from "@/i18n/routing";
 import RotatingText from "@/components/RotatingText";
 import { motion } from "motion/react";
 
-const demoItems = [
-  { link: 'https://www.facebook.com/watch/?ref=saved&v=4419187088357190', text: 'Sumatera', image: 'https://picsum.photos/600/400?random=1' },
-  { link: '#', text: 'Jawa', image: 'https://picsum.photos/600/400?random=2' },
-  { link: '#', text: 'Kalimantan', image: 'https://picsum.photos/600/400?random=3' },
-  { link: '#', text: 'Bali Nusa Tenggara', image: 'https://picsum.photos/600/400?random=4' },
-  { link: '#', text: 'Maluku & Papua', image: 'https://picsum.photos/600/400?random=5' }
+const daerah = [
+  { link: '/sumatera', text: 'Sumatera', image: 'https://picsum.photos/600/400?random=1' },
+  { link: '/jawa', text: 'Jawa', image: 'https://picsum.photos/600/400?random=2' },
+  { link: '/kalimantan', text: 'Kalimantan', image: 'https://picsum.photos/600/400?random=3' },
+  { link: '/bali', text: 'Bali & Nusa Tenggara', image: 'https://picsum.photos/600/400?random=4' },
+  { link: '/maluku', text: 'Maluku & Papua', image: 'https://picsum.photos/600/400?random=5' }
 ];
 
 export default function Home() {
@@ -188,7 +188,7 @@ const FlowingMenus = () => {
     <div className="bg-white py-12 border-t border-neutral-100">
       <div style={{ height: '400px', position: 'relative' }}>
         <FlowingMenu
-          items={demoItems}
+          items={daerah}
           speed={15}
           textColor="#000000"
           bgColor="#ffffff"

@@ -20,5 +20,29 @@
   "Team": {
     "back": "Back to Home",
     "title": "Meet Our Founders"
+  },
+  "Regions": {
+    "back": "Back to Home",
+    "dragHint": "Drag and spin to explore the 3D gallery",
+    "bali": {
+      "title": "Richness of Balinese Cuisine",
+      "subtitle": "Traditional spice-rich delicacies from the Island of Gods"
+    },
+    "jawa": {
+      "title": "Savory Taste of Javanese Cuisine",
+      "subtitle": "Authentic sweet, savory, and legendary flavors"
+    },
+    "kalimantan": {
+      "title": "Flavors of Kalimantan",
+      "subtitle": "Unique riverine dishes and equatorial spices of the line"
+    },
+    "maluku": {
+      "title": "Exotic Maluku & Papua Cuisine",
+      "subtitle": "Magical taste of indigenous spices and seafood from the east"
+    },
+    "sumatera": {
+      "title": "Grandeur of Sumatran Cuisine",
+      "subtitle": "Bold, spicy, and rich savory flavors that entice the palate"
+    }
   }
 }
