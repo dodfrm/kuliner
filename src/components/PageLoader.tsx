@@ -3,29 +3,30 @@
 import React, { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
-import Shuffle from "@/components/Shuffle";
+import RotatingText from "@/components/RotatingText";
 import CountUp from "@/components/CountUp";
 
 export default function PageLoader() {
   const pathname = usePathname();
   const [showLoader, setShowLoader] = useState(true);
   const [loadKey, setLoadKey] = useState(0);
-  const [duration, setDuration] = useState(2.0); 
+  const [duration, setDuration] = useState(2.0); // 2.0s for initial load, 1.0s for transitions
   const prevPathname = useRef(pathname);
 
   useEffect(() => {
     if (pathname !== prevPathname.current) {
       prevPathname.current = pathname;
-      setDuration(1);
+      setDuration(1.0);
       setLoadKey((k) => k + 1);
       setShowLoader(true);
     }
   }, [pathname]);
 
   const handleLoadingComplete = () => {
+    // Wait 500ms after count complete to let the number settle at 100% and show complete state
     setTimeout(() => {
       setShowLoader(false);
-    }, 2000);
+    }, 500);
   };
 
   return (
@@ -43,21 +44,25 @@ export default function PageLoader() {
           <div className="absolute w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none -bottom-40 -right-40 animate-pulse" />
 
           {/* Centered animated text question */}
-          <div className="relative z-10 text-center px-6">
-            <Shuffle
-              key={`shuffle-${loadKey}`}
-              text="Sudah Makan Belum?"
-              className="font-sans text-4xl md:text-6xl font-extrabold tracking-tight text-white bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent"
-              shuffleDirection="right"
-              animationMode="evenodd"
-              shuffleTimes={1}
-              stagger={0.03}
-              ease="power3.out"
-              duration={0.5}
-              triggerOnce={false}
-              triggerOnHover={false}
+          <div className="relative z-10 flex flex-row flex-wrap items-center justify-center gap-x-2 text-4xl md:text-6xl font-extrabold tracking-tight text-white px-6">
+            <span>Udah</span>
+            <RotatingText
+              texts={["Makan", "Jajan", "Laper", "Ngemil"]}
+              mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg inline-flex"
+              staggerFrom="first"
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              staggerDuration={0.025}
+              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              rotationInterval={1000}
+              splitBy="characters"
+              auto
               loop
+              key={`rotating-${loadKey}`}
             />
+            <span>belum?</span>
           </div>
 
           {/* Bottom Right CountUp Progress Percentage */}

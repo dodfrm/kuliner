@@ -1,13 +1,19 @@
 {
   "Navbar": {
-    "home": "Beranda",
+    "features": "Fitur",
     "pricing": "Harga",
     "team": "Tim Kami",
     "indonesian": "Indonesia",
     "english": "English"
   },
   "Home": {
-    "welcome": "Selamat Datang di Website Kami"
+    "welcome": "Selamat Datang di Website Kami",
+    "sukaMakan": "Suka Makan",
+    "pedas": "Pedas?",
+    "manis": "Manis?",
+    "gurih": "Gurih?",
+    "asam": "Asam?",
+    "description": "Temukan keanekaragaman cita rasa kuliner Nusantara dari Sabang sampai Merauke. Mulai petualangan rasamu hari ini!"
   },
   "Team": {
     "back": "Kembali ke Beranda",

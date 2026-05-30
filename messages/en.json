@@ -1,13 +1,21 @@
 {
   "Navbar": {
-    "home": "Home",
+    "features": "Features",
     "pricing": "Pricing",
     "team": "Our Team",
     "indonesian": "Indonesia",
     "english": "English"
   },
   "Home": {
-    "welcome": "Welcome to Our Website"
+    "welcome": "Welcome to Our Website",
+    "sukaMakan": "Love Eating",
+    "pedas": "Spicy?",
+    "manis": "Sweet?",
+    "gurih": "Savory?",
+    "asam": "Sour?",
+    "description": "Discover the rich diversity of Indonesian culinary flavors from Sabang to Merauke. Start your flavor adventure today!",
+    "ctaExplore": "Explore Now",
+    "ctaTeam": "Meet Our Founders"
   },
   "Team": {
     "back": "Back to Home",
