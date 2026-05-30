@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 import FlowingMenu from "@/components/FlowingMenu";
+import Lanyard from "@/components/Lanyard";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import RotatingText from "@/components/RotatingText";
@@ -39,14 +40,14 @@ export default function Home() {
     },
     {
       name: t("team"),
-      link: "/team",
+      link: "#team",
     },
   ];
  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   return (
-    <div className="relative w-full bg-white text-neutral-900 min-h-screen selection:bg-teal-500 selection:text-white">
+    <div className="relative w-full bg-white text-neutral-900 min-h-screen selection:bg-teal-500 selection:text-white scroll-smooth">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
@@ -95,6 +96,9 @@ export default function Home() {
       <div id="explore">
         <FlowingMenus />
       </div>
+      <div id="team">
+        <TeamSection />
+      </div>
     </div>
   );
 }
@@ -126,14 +130,14 @@ const HeroSection = () => {
           <span className="inline-flex min-h-[1.2em] items-center">
             <RotatingText
               texts={[t("pedas"), t("manis"), t("gurih"), t("asam")]}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+              mainClassName="px-2 sm:px-2 md:px-3 bg-none text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
               staggerDuration={0.03}
-              staggerFrom="first"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "-120%" }}
+              staggerFrom="first"
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
-              rotationInterval={2200}
+              rotationInterval={3200}
               splitBy="characters"
             />
           </span>
@@ -194,5 +198,44 @@ const FlowingMenus = () => {
         />
       </div>
     </div>
+  );
+};
+
+const TeamSection = () => {
+  const t = useTranslations("Team");
+
+  return (
+    <section className="relative min-h-screen bg-neutral-950 text-neutral-200 flex flex-col items-center justify-center py-20 px-4 sm:px-6 lg:px-8 overflow-x-hidden selection:bg-teal-500 selection:text-white">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-[300px] h-[300px] bg-teal-500/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-10 left-1/4 w-[300px] h-[300px] bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
+
+      {/* Header */}
+      <div className="relative w-full max-w-5xl z-10 flex flex-col items-center text-center mb-16">
+        <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent">
+          {t("title")}
+        </h2>
+      </div>
+
+      {/* Cards Container - Swiper/Carousel on Mobile, Grid on Desktop */}
+      <div className="flex md:grid md:grid-cols-2 gap-8 w-full max-w-5xl z-10 overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] pb-8 px-4 md:px-0">
+        
+        {/* Team Member 1 */}
+        <div className="snap-center shrink-0 w-[80vw] sm:w-[60vw] md:w-full h-[55vh] md:h-[65vh] relative group bg-gradient-to-b from-neutral-900/80 to-neutral-950 border border-neutral-800/80 rounded-2xl overflow-hidden hover:border-teal-500/30 transition-all duration-500 shadow-2xl shadow-black/40">
+          <div className="w-full h-full pt-6">
+            <Lanyard cardTexture="/dodi-card.png" position={[0, 0, 11]} gravity={[0, -40, 0]} />
+          </div>
+        </div>
+
+        {/* Team Member 2 */}
+        <div className="snap-center shrink-0 w-[80vw] sm:w-[60vw] md:w-full h-[55vh] md:h-[65vh] relative group bg-gradient-to-b from-neutral-900/80 to-neutral-950 border border-neutral-800/80 rounded-2xl overflow-hidden hover:border-indigo-500/30 transition-all duration-500 shadow-2xl shadow-black/40">
+          <div className="w-full h-full pt-6">
+            <Lanyard cardTexture="/wilfa-card.png" position={[0, 0, 11]} gravity={[0, -40, 0]} />
+          </div>
+        </div>
+
+      </div>
+    </section>
   );
 };
