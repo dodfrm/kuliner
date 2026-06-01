@@ -1,7 +1,7 @@
 {
   "Navbar": {
     "features": "Features",
-    "pricing": "Pricing",
+    "explore": "Explore",
     "team": "Our Team",
     "indonesian": "Indonesia",
     "english": "English"
@@ -19,7 +19,12 @@
   },
   "Team": {
     "back": "Back to Home",
-    "title": "Meet Our Founders"
+    "title": "Meet Our Founders",
+    "subtitle": "Get to know our founding team dedicated to introducing the authentic delicacies of the archipelago."
+  },
+  "FlowingMenu": {
+    "title": "Explore Archipelago Cuisine",
+    "subtitle": "Select your favorite place and begin a culinary adventure with unique and unforgettable flavors."
   },
   "Regions": {
     "back": "Back to Home",

@@ -1,7 +1,7 @@
 {
   "Navbar": {
     "features": "Fitur",
-    "pricing": "Harga",
+    "explore": "Jelajahi",
     "team": "Tim Kami",
     "indonesian": "Indonesia",
     "english": "English"
@@ -17,7 +17,12 @@
   },
   "Team": {
     "back": "Kembali ke Beranda",
-    "title": "Berkenalan Dengan Kami"
+    "title": "Berkenalan Dengan Kami",
+    "subtitle": "Kenali lebih dekat tim pendiri kami yang berdedikasi untuk memperkenalkan kelezatan otentik Nusantara."
+  },
+  "FlowingMenu": {
+    "title": "Jelajahi Kuliner Nusantara",
+    "subtitle": "Pilih daerah favoritmu dan mulailah petualangan kuliner dengan cita rasa yang unik dan tak terlupakan."
   },
   "Regions": {
     "back": "Kembali ke Beranda",

@@ -106,8 +106,8 @@ export const HeroParallax = ({
 export const Header = () => {
   const t = useTranslations("Home");
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
+    <div className="max-w-7xl relative mx-auto py-20 md:py-30 px-4 w-full left-0 top-0">
+      <h1 className="text-5xl md:text-7xl font-bold dark:text-white">
           <span className="text-black dark:text-white">{t("sukaMakan")}</span>
           <span className="inline-flex min-h-[1.2em] items-center">
             <RotatingText

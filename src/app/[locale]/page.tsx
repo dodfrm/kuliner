@@ -21,6 +21,7 @@ import { HeroParallax } from "@/components/ui/hero-parallax";
 import Footer from "@/components/Footer";
 import { useTheme } from "next-themes";
 import { ThemeToggleButton } from "@/components/ui/skiper-ui/skiper26";
+import { IconBrandGithub, IconBrandLinkedin, IconBrandInstagram } from "@tabler/icons-react";
 
 const daerah = [
   { link: '/sumatera', text: 'Sumatera', image: 'https://picsum.photos/600/400?random=1' },
@@ -39,8 +40,8 @@ export default function Home() {
       link: "#features",
     },
     {
-      name: t("pricing"),
-      link: "#pricing",
+      name: t("explore"),
+      link: "#explore",
     },
     {
       name: t("team"),
@@ -263,6 +264,7 @@ const HeroSection = () => {
 const FlowingMenus = () => {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const t = useTranslations("FlowingMenu");
 
   useEffect(() => {
     setMounted(true);
@@ -271,7 +273,15 @@ const FlowingMenus = () => {
   const isDark = mounted && resolvedTheme === "dark";
 
   return (
-    <div className="bg-white dark:bg-neutral-950 py-12 border-t border-neutral-100 dark:border-neutral-800/80 transition-colors duration-300">
+    <div className="bg-white dark:bg-neutral-950 py-16 border-t border-neutral-100 dark:border-neutral-800/80 transition-colors duration-300">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10 z-10 relative">
+        <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-400 bg-clip-text text-transparent">
+          {t("title")}
+        </h2>
+        <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-center max-w-lg mx-auto text-sm sm:text-base">
+          {t("subtitle")}
+        </p>
+      </div>
       <div style={{ height: '400px', position: 'relative' }}>
         <FlowingMenu
           items={daerah}
@@ -302,6 +312,9 @@ const TeamSection = () => {
         <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-400 bg-clip-text text-transparent">
           {t("title")}
         </h2>
+        <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-center max-w-lg mx-auto text-sm sm:text-base">
+          {t("subtitle")}
+        </p>
       </div>
 
       {/* Cards Container - Swiper/Carousel on Mobile, Grid on Desktop */}
@@ -312,12 +325,66 @@ const TeamSection = () => {
           <div className="w-full h-full pt-6">
             <Lanyard cardTexture="/dodi-card.png" position={[0, 0, 11]} gravity={[0, -40, 0]} />
           </div>
+          {/* Social Icons */}
+          <div className="absolute bottom-4 left-4 z-20 flex items-center gap-3">
+            <a
+              href="https://github.com/dodfrm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full bg-white/80 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300 hover:text-teal-500 hover:border-teal-500/50 dark:hover:text-teal-400 dark:hover:border-teal-400/50 transition-all duration-300 backdrop-blur-sm shadow-lg hover:scale-110 active:scale-95"
+            >
+              <IconBrandGithub size={18} />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full bg-white/80 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300 hover:text-teal-500 hover:border-teal-500/50 dark:hover:text-teal-400 dark:hover:border-teal-400/50 transition-all duration-300 backdrop-blur-sm shadow-lg hover:scale-110 active:scale-95"
+            >
+              <IconBrandLinkedin size={18} />
+            </a>
+            <a
+              href="https://instagram.com/dodfrm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full bg-white/80 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300 hover:text-teal-500 hover:border-teal-500/50 dark:hover:text-teal-400 dark:hover:border-teal-400/50 transition-all duration-300 backdrop-blur-sm shadow-lg hover:scale-110 active:scale-95"
+            >
+              <IconBrandInstagram size={18} />
+            </a>
+          </div>
         </div>
 
         {/* Team Member 2 */}
         <div className="snap-center shrink-0 w-[80vw] sm:w-[60vw] md:w-full h-[55vh] md:h-[65vh] relative group bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-900/80 dark:to-neutral-950 border border-neutral-200 dark:border-neutral-800/80 rounded-2xl overflow-hidden hover:border-indigo-500/30 transition-all duration-500 shadow-2xl shadow-neutral-200/50 dark:shadow-black/40">
           <div className="w-full h-full pt-6">
             <Lanyard cardTexture="/wilfa-card.png" position={[0, 0, 11]} gravity={[0, -40, 0]} />
+          </div>
+          {/* Social Icons */}
+          <div className="absolute bottom-4 left-4 z-20 flex items-center gap-3">
+            <a
+              href="https://github.com/kalascode"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full bg-white/80 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300 hover:text-indigo-500 hover:border-indigo-500/50 dark:hover:text-indigo-400 dark:hover:border-indigo-400/50 transition-all duration-300 backdrop-blur-sm shadow-lg hover:scale-110 active:scale-95"
+            >
+              <IconBrandGithub size={18} />
+            </a>
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full bg-white/80 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300 hover:text-indigo-500 hover:border-indigo-500/50 dark:hover:text-indigo-400 dark:hover:border-indigo-400/50 transition-all duration-300 backdrop-blur-sm shadow-lg hover:scale-110 active:scale-95"
+            >
+              <IconBrandLinkedin size={18} />
+            </a>
+            <a
+              href="https://instagram.com/will.faa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full bg-white/80 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-300 hover:text-indigo-500 hover:border-indigo-500/50 dark:hover:text-indigo-400 dark:hover:border-indigo-400/50 transition-all duration-300 backdrop-blur-sm shadow-lg hover:scale-110 active:scale-95"
+            >
+              <IconBrandInstagram size={18} />
+            </a>
           </div>
         </div>
 

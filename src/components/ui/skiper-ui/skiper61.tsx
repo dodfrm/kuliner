@@ -77,8 +77,8 @@ const SpringMouseFollow = ({ global = false }: SpringMouseFollowProps) => {
 
     const handlePointerMove = (e: PointerEvent) => {
       // Offset by half of cursor size (size-6 is 24px, so -12) to align center
-      xSpring.set(e.clientX);
-      ySpring.set(e.clientY);
+      xSpring.set(e.clientX - 12);
+      ySpring.set(e.clientY - 12);
 
       if (!hasMoved) {
         hasMoved = true;
