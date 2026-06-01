@@ -35,8 +35,8 @@ export default function RegionGalleryPage({ regionKey, images }: RegionGalleryPa
       link: "/#features",
     },
     {
-      name: tNav("pricing"),
-      link: "/#pricing",
+      name: tNav("explore"),
+      link: "/#explore",
     },
     {
       name: tNav("team"),
