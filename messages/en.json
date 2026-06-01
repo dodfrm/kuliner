@@ -23,7 +23,6 @@
   },
   "Regions": {
     "back": "Back to Home",
-    "dragHint": "Drag and spin to explore the 3D gallery",
     "bali": {
       "title": "Richness of Balinese Cuisine",
       "subtitle": "Traditional spice-rich delicacies from the Island of Gods"
@@ -44,5 +43,14 @@
       "title": "Grandeur of Sumatran Cuisine",
       "subtitle": "Bold, spicy, and rich savory flavors that entice the palate"
     }
+  },
+  "Footer": {
+    "tagline": "Exploring the diversity of Nusantara's traditional culinary arts with passion and exquisite taste.",
+    "quickLinks": "Quick Links",
+    "regions": "Culinary Regions",
+    "contact": "Contact Us",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
   }
 }

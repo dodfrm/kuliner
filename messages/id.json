@@ -21,7 +21,6 @@
   },
   "Regions": {
     "back": "Kembali ke Beranda",
-    "dragHint": "Seret dan geser untuk menjelajah galeri 3D",
     "bali": {
       "title": "Kekayaan Kuliner Bali",
       "subtitle": "Kelezatan kaya bumbu tradisional dari Pulau Dewata"
@@ -42,5 +41,14 @@
       "title": "Keagungan Kuliner Sumatera",
       "subtitle": "Sensasi pedas, gurih, dan rempah tajam yang memanjakan lidah"
     }
+  },
+  "Footer": {
+    "tagline": "Menjelajahi keanekaragaman kuliner tradisional Nusantara dengan cinta dan cita rasa tinggi.",
+    "quickLinks": "Tautan Cepat",
+    "regions": "Wilayah Kuliner",
+    "contact": "Kontak Kami",
+    "rights": "Semua hak dilindungi undang-undang.",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat & Ketentuan"
   }
 }

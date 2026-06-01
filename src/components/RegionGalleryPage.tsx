@@ -15,6 +15,7 @@ import {
   LanguageSwitcher,
 } from "@/components/ui/resizable-navbar";
 import DomeGallery from "@/components/DomeGallery";
+import { ThemeToggleButton } from "@/components/ui/skiper-ui/skiper26";
 
 type ImageItem = string | { src: string; alt?: string };
 
@@ -44,10 +45,10 @@ export default function RegionGalleryPage({ regionKey, images }: RegionGalleryPa
   ];
 
   return (
-    <div className="dark relative w-full h-screen bg-[#0b0813] text-neutral-100 overflow-hidden flex flex-col font-sans">
+    <div className="relative w-full h-screen bg-neutral-50 dark:bg-[#0b0813] text-neutral-900 dark:text-neutral-100 overflow-hidden flex flex-col font-sans transition-colors duration-300">
       {/* Ambient background glows */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-teal-900/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-200/20 dark:bg-purple-900/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-teal-200/20 dark:bg-teal-900/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Existing Navbar */}
       <Navbar>
@@ -56,6 +57,7 @@ export default function RegionGalleryPage({ regionKey, images }: RegionGalleryPa
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
+            <ThemeToggleButton variant="circle" start="center" />
           </div>
         </NavBody>
 
@@ -84,9 +86,12 @@ export default function RegionGalleryPage({ regionKey, images }: RegionGalleryPa
             ))}
             <div className="flex w-full flex-col gap-2 border-t border-neutral-100 dark:border-neutral-800 pt-4 mt-2">
               <span className="text-[10px] font-bold text-neutral-400 dark:text-neutral-500 uppercase tracking-wider px-2">
-                Language / Bahasa
+                Language & Theme
               </span>
-              <LanguageSwitcher className="w-full justify-start px-2" />
+              <div className="flex items-center justify-between px-2 w-full gap-4">
+                <LanguageSwitcher className="w-auto justify-start" />
+                <ThemeToggleButton variant="circle" start="center" />
+              </div>
             </div>
           </MobileNavMenu>
         </MobileNav>
@@ -94,10 +99,10 @@ export default function RegionGalleryPage({ regionKey, images }: RegionGalleryPa
 
       {/* Region Title & Subtitle */}
       <div className="relative z-10 text-center pt-32 px-4 select-none pointer-events-none">
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-2 bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent">
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white mb-2 dark:bg-gradient-to-b dark:from-white dark:to-neutral-400 dark:bg-clip-text dark:text-transparent">
           {t(`${regionKey}.title`)}
         </h1>
-        <p className="text-xs sm:text-sm text-neutral-400 font-light max-w-xl mx-auto">
+        <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-light max-w-xl mx-auto">
           {t(`${regionKey}.subtitle`)}
         </p>
       </div>
@@ -113,15 +118,6 @@ export default function RegionGalleryPage({ regionKey, images }: RegionGalleryPa
             segments={30}
             grayscale={false}
           />
-        </div>
-
-        {/* Swipe Instruction */}
-        <div className="relative z-40 w-full py-6 flex flex-col items-center justify-center pointer-events-none select-none">
-          <div className="flex flex-col items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/5 animate-pulse">
-            <span className="text-[10px] font-medium tracking-wider text-neutral-300 uppercase">
-              {t("dragHint")}
-            </span>
-          </div>
         </div>
       </main>
     </div>

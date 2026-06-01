@@ -5,7 +5,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
-import PageLoader from "@/components/PageLoader";
+import Preloader from "@/components/Preloader";
+import { ThemeProvider } from "@/components/theme-provider";
+import { SpringMouseFollow } from "@/components/ui/skiper-ui/skiper61";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,11 +45,20 @@ export default async function RootLayout({
     <html
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <PageLoader />
-          {children}
+          <Preloader 
+          variant="stairs" 
+          position="fixed" 
+          zIndex={9999}
+          bgColor="#18181b"
+          loadingText="Udah Makan Belum?" />
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            {children}
+            <SpringMouseFollow global />
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
