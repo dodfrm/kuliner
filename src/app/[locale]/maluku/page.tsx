@@ -1,18 +1,26 @@
-import RegionGalleryPage from "@/components/RegionGalleryPage";
+"use client";
 
-const MALUKU_IMAGES = [
-  { src: "https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=800&auto=format&fit=crop", alt: "Ikan Kuah Kuning & Papeda" },
-  { src: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop", alt: "Gohu Ikan" },
-  { src: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?q=80&w=800&auto=format&fit=crop", alt: "Sambal Colocolo" },
-  { src: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=800&auto=format&fit=crop", alt: "Rempah Maluku (Pala & Cengkeh)" },
-  { src: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=800&auto=format&fit=crop", alt: "Ikan Bakar Banda" },
-  { src: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?q=80&w=800&auto=format&fit=crop", alt: "Gulai Seafood Maluku" },
-  { src: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop", alt: "Kue Sagu" },
-  { src: "https://images.unsplash.com/photo-1566818614417-640c666a014a?q=80&w=800&auto=format&fit=crop", alt: "Pisang Mulut Bebek" },
-  { src: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop", alt: "Kohu-Kohu" },
-  { src: "https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=800&auto=format&fit=crop", alt: "Nasi Lapola" }
-];
+import RegionGalleryPage from "@/components/RegionGalleryPage";
+import { useTranslations } from "next-intl";
 
 export default function MalukuPage() {
+  const t = useTranslations("Regions");
+
+  const MALUKU_IMAGES = [
+    { src: "/makanan/45.png", title: t("maluku.makanan1.title"), description: t("maluku.makanan1.desc") },
+    { src: "/makanan/46.png", title: t("maluku.makanan2.title"), description: t("maluku.makanan2.desc") },
+    { src: "/makanan/47.png", title: t("maluku.makanan3.title"), description: t("maluku.makanan3.desc") },
+    { src: "/makanan/48.png", title: t("maluku.makanan4.title"), description: t("maluku.makanan4.desc") },
+    { src: "/makanan/49.png", title: t("maluku.makanan5.title"), description: t("maluku.makanan5.desc") },
+    { src: "/makanan/50.png", title: t("maluku.makanan6.title"), description: t("maluku.makanan6.desc") },
+    { src: "/makanan/51.png", title: t("maluku.makanan7.title"), description: t("maluku.makanan7.desc") },
+    { src: "/makanan/52.png", title: t("maluku.makanan8.title"), description: t("maluku.makanan8.desc") },
+    { src: "/makanan/53.png", title: t("maluku.makanan9.title"), description: t("maluku.makanan9.desc") },
+    { src: "/makanan/54.png", title: t("maluku.makanan10.title"), description: t("maluku.makanan10.desc") },
+    { src: "/makanan/55.png", title: t("maluku.makanan11.title"), description: t("maluku.makanan11.desc") },
+    { src: "/makanan/56.png", title: t("maluku.makanan12.title"), description: t("maluku.makanan12.desc") },
+    { src: "/makanan/57.png", title: t("maluku.makanan13.title"), description: t("maluku.makanan13.desc") },
+  ];
+
   return <RegionGalleryPage regionKey="maluku" images={MALUKU_IMAGES} />;
 }

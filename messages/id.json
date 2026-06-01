@@ -28,23 +28,235 @@
     "back": "Kembali ke Beranda",
     "bali": {
       "title": "Kekayaan Kuliner Bali",
-      "subtitle": "Kelezatan kaya bumbu tradisional dari Pulau Dewata"
+      "subtitle": "Kelezatan kaya bumbu tradisional dari Pulau Dewata",
+      "makanan1": {
+        "title": "Ayam Betutu",
+        "desc": "Hidangan khas Bali berupa ayam utuh yang diisi bumbu genep, kemudian dibungkus daun pisang dan dipanggang atau dikukus hingga dagingnya sangat empuk dan kaya rempah."
+      },
+      "makanan2": {
+        "title": "Sate Lilit",
+        "desc": "Sate khas Bali yang terbuat dari daging cincang (ayam, ikan, atau babi) yang dicampur kelapa parut dan bumbu rempah, lalu dililitkan pada batang serai atau bambu sebelum dibakar."
+      },
+      "makanan3": {
+        "title": "Babi Guling",
+        "desc": "Hidangan pesta tradisional Bali berupa babi utuh yang dipanggang lambat dengan isian bumbu base genep hingga kulitnya menjadi sangat renyah dan dagingnya empuk beraroma harum."
+      },
+      "makanan4": {
+        "title": "Ayam Taliwang",
+        "desc": "Kuliner khas Lombok berupa ayam kampung muda yang dibakar atau digoreng dengan bumbu cabai kering, bawang, kencur, dan terasi, menghasilkan rasa pedas membakar yang gurih."
+      },
+      "makanan5": {
+        "title": "Pelecing Kangkung",
+        "desc": "Makanan khas Lombok dan Bali berupa kangkung air rebus yang disajikan dingin dengan siraman sambal tomat-terasi mentah yang pedas segar dan perasan jeruk limau."
+      },
+      "makanan6": {
+        "title": "Se'i Sapi",
+        "desc": "Kuliner daging sapi khas Kupang (NTT) yang diiris tipis dan dimasak dengan teknik pengasapan tradisional menggunakan kayu kosambi, memberikan aroma asap yang khas dan rasa gurih."
+      },
+      "makanan7": {
+        "title": "Sate Rembiga",
+        "desc": "Sate daging sapi khas Lombok dengan cita rasa manis pedas gurih yang meresap sempurna karena daging dimarinasi dengan cabai, gula merah, dan bumbu rempah sebelum dibakar."
+      },
+      "makanan8": {
+        "title": "Jagung Bose",
+        "desc": "Hidangan bubur tradisional khas NTT terbuat dari jagung putih yang ditumbuk, dimasak bersama kacang-kacangan (seperti kacang merah) dan labu manis dalam kuah santan gurih."
+      },
+      "makanan9": {
+        "title": "Catemak Jagung",
+        "desc": "Makanan penutup atau camilan khas NTT berupa sup jagung yang dimasak bersama kacang tanah, kacang hijau, dan beragam sayuran hijau dengan rasa gurih yang menyehatkan."
+      },
+      "makanan10": {
+        "title": "Lawar",
+        "desc": "Hidangan campuran khas Bali berisi sayuran rebus, kelapa parut, dan daging cincang yang dibumbui rempah-rempah melimpah serta kadang dicampur dengan darah segar untuk versi tradisionalnya."
+      }
     },
     "jawa": {
       "title": "Sajian Kuliner Jawa",
-      "subtitle": "Cita rasa otentik yang manis, gurih, dan legendaris"
+      "subtitle": "Cita rasa otentik yang manis, gurih, dan legendaris",
+      "makanan1": {
+        "title": "Gudeg",
+        "desc": "Makanan khas Yogyakarta berbahan dasar nangka muda yang dimasak berjam-jam dengan santan, gula merah, dan bumbu rempah hingga manis dan empuk."
+      },
+      "makanan2": {
+        "title": "Rawon",
+        "desc": "Sup daging hitam khas Jawa Timur yang menggunakan buah kluwek sebagai bumbu utama untuk menghasilkan kuah hitam pekat beraroma khas yang gurih."
+      },
+      "makanan3": {
+        "title": "Nasi Liwet",
+        "desc": "Nasi gurih khas Solo yang dimasak dengan santan dan kaldu ayam, disajikan bersama sayur labu siam, ayam suwir, telur pindang, dan kumut santan."
+      },
+      "makanan4": {
+        "title": "Kerak Telor",
+        "desc": "Makanan khas Betawi berupa telur dadar gurih yang dimasak kering bersama beras ketan, kelapa parut sangrai (serundeng), dan ebi."
+      },
+      "makanan5": {
+        "title": "Tahu Tek",
+        "desc": "Hidangan khas Surabaya berisi tahu goreng, lontong, kentang, dan taoge yang disiram dengan saus kacang kental berbumbu petis udang gurih."
+      },
+      "makanan6": {
+        "title": "Rujak Cingur",
+        "desc": "Rujak unik khas Jawa Timur yang mencampurkan buah-buahan segar, sayuran rebus, tahu, tempe, dan cingur (mulut sapi) dengan saus petis udang."
+      },
+      "makanan7": {
+        "title": "Nasi Timbel",
+        "desc": "Nasi timbel khas Sunda yang dibungkus daun pisang hangat, disajikan lengkap dengan ayam goreng, tahu, tempe, lalapan segar, dan sambal terasi pedas."
+      },
+      "makanan8": {
+        "title": "Lumpia",
+        "desc": "Jajanan khas Semarang berupa kulit lumpia renyah dengan isian rebung manis gurih, telur, dan daging ayam atau udang."
+      },
+      "makanan9": {
+        "title": "Tongseng",
+        "desc": "Gulai daging (kambing atau sapi) khas Jawa Tengah dengan kuah rempah yang kental, ditambah kecap manis, irisan kubis, tomat, dan cabai rawit."
+      },
+      "makanan10": {
+        "title": "Soto Lamongan",
+        "desc": "Soto ayam khas Jawa Timur berkuah kuning bening gurih bertabur bubuk koya gurih (kerupuk udang dan bawang putih parut) yang khas."
+      }
     },
     "kalimantan": {
       "title": "Cita Rasa Kalimantan",
-      "subtitle": "Keunikan hidangan khas sungai dan rempah Khatulistiwa"
+      "subtitle": "Keunikan hidangan khas sungai dan rempah Khatulistiwa",
+      "makanan1": {
+        "title": "Soto Banjar",
+        "desc": "Soto khas suku Banjar, Kalimantan Selatan dengan bahan utama ayam dan beraroma harum rempah-rempah seperti kayu manis, biji pala, dan cengkih, disajikan dengan perkedel kentang dan ketupat."
+      },
+      "makanan2": {
+        "title": "Ketupat Kandangan",
+        "desc": "Kuliner khas Kandangan, Kalimantan Selatan, berupa ketupat yang disajikan dengan kuah santan kuning kental gurih dan ikan gabus (haruan) asap yang dimasak terpisah."
+      },
+      "makanan3": {
+        "title": "Choipan",
+        "desc": "Camilan gurih khas Pontianak berupa adonan tepung beras bertekstur lembut dengan isian bengkuang serut, ebi, atau kucai, disajikan dengan taburan bawang putih goreng dan saus cabai asam manis."
+      },
+      "makanan4": {
+        "title": "Bubur Pedas",
+        "desc": "Makanan tradisional khas suku Melayu Sambas (Kalimantan Barat) terbuat dari beras yang disangrai dan ditumbuk halus, dimasak bersama aneka sayuran hijau segar, kacang tanah, dan teri goreng."
+      },
+      "makanan5": {
+        "title": "Pengkang",
+        "desc": "Penganan khas Kalimantan Barat berbahan dasar ketan dengan isian ebi yang dibungkus daun pisang berbentuk kerucut/segitiga, lalu dijepit bambu dan dibakar di atas bara api."
+      },
+      "makanan6": {
+        "title": "Manday",
+        "desc": "Kuliner khas Banjar terbuat dari kulit buah cempedak yang diawetkan melalui proses fermentasi garam, biasanya diolah dengan cara digoreng atau ditumis bersama cabai dan bawang."
+      },
+      "makanan7": {
+        "title": "Nasi Kuning Samarinda",
+        "desc": "Hidangan nasi kuning khas Kalimantan Timur yang terkenal dengan lauk pelengkap berupa ikan haruan (gabus) yang dimasak bumbu merah (habang) yang manis dan gurih."
+      },
+      "makanan8": {
+        "title": "Gance Ruan",
+        "desc": "Kuliner khas Kutai Kartanegara berupa hidangan ikan gabus (ruan) bakar yang disiram dengan sambal gance (sambal rica pedas khas Kutai) yang melimpah dan gurih."
+      },
+      "makanan9": {
+        "title": "Juhu Singkah",
+        "desc": "Makanan khas suku Dayak berupa sup berkuah santan encer kuning dengan bahan utama umbut rotan (rotan muda) yang memiliki cita rasa gurih berpadu dengan rasa sedikit pahit yang segar."
+      },
+      "makanan10": {
+        "title": "Kepiting Soka",
+        "desc": "Hidangan kepiting bercangkang lunak khas Kalimantan Utara yang digoreng tepung hingga sangat renyah, disajikan dengan saus padang pedas manis atau saus telur asin."
+      }
     },
     "maluku": {
       "title": "Eksotisme Kuliner Maluku & Papua",
-      "subtitle": "Pesona cita rasa rempah asli dan laut kepulauan timur"
+      "subtitle": "Pesona cita rasa rempah asli dan laut kepulauan timur",
+      "makanan1": {
+        "title": "Ikan Kuah Kuning",
+        "desc": "Hidangan khas Maluku berupa ikan (biasanya tongkol atau cakalang) yang dimasak dengan kuah bumbu kuning kunyit, serai, daun jeruk, dan belimbing wuluh yang segar dan asam."
+      },
+      "makanan2": {
+        "title": "Papeda",
+        "desc": "Makanan pokok khas Papua dan Maluku berupa bubur sagu kental bertekstur kenyal yang disajikan hangat bersama kuah ikan kuning dan sayur ganemu."
+      },
+      "makanan3": {
+        "title": "Gohu Ikan",
+        "desc": "Sashimi khas Ternate (Maluku Utara) yang terbuat dari potongan ikan tuna atau cakalang mentah segar, dilumuri jus lemon cui/nipis, garam, daun kemangi, lalu disiram minyak kelapa panas bertabur kacang tanah sangrai."
+      },
+      "makanan4": {
+        "title": "Nasi Lapola",
+        "desc": "Makanan khas Maluku berupa kombinasi nasi yang dimasak bersama kacang tolo dan kelapa parut setengah tua, menghasilkan cita rasa gurih yang khas."
+      },
+      "makanan5": {
+        "title": "Kohu-Kohu",
+        "desc": "Hidangan mirip urap khas Maluku yang memadukan parutan kelapa dengan suwiran ikan cakalang asar (asap), kacang panjang, taoge, dan perasan jeruk nipis."
+      },
+      "makanan6": {
+        "title": "Sambal Colo-Colo",
+        "desc": "Sambal legendaris khas Maluku yang sangat segar, terbuat dari potongan cabai rawit, bawang merah, tomat muda hijau, perasan jeruk nipis, dan kecap manis atau minyak kelapa."
+      },
+      "makanan7": {
+        "title": "Kue Bagea",
+        "desc": "Kue tradisional khas Maluku dan Papua bertekstur renyah dan sedikit keras, terbuat dari tepung sagu, kacang kenari, kayu manis, dan cengkih yang harum."
+      },
+      "makanan8": {
+        "title": "Woku Komo-Komo",
+        "desc": "Hidangan khas Maluku terbuat dari sagu basah yang dicampur dengan tumisan bumbu rempah harum, jeroan ikan, lalu dibungkus daun woka dan dibakar."
+      },
+      "makanan9": {
+        "title": "Bubur Ne",
+        "desc": "Makanan manis penutup khas Maluku berupa bubur sagu mutiara warna-warni yang dimasak dengan kuah santan dan gula aren harum pandan, disajikan dingin atau hangat."
+      },
+      "makanan10": {
+        "title": "Ikan Asar",
+        "desc": "Ikan cakalang atau tongkol khas Maluku yang diasap utuh di atas bara sabut kelapa hingga kering merata, memiliki aroma asap yang kuat dan daging yang padat gurih."
+      },
+      "makanan11": {
+        "title": "Udang Selingkuh",
+        "desc": "Kuliner khas Wamena (Papua) berupa udang air tawar dengan capit besar mirip kepiting, dimasak dengan cara direbus atau digoreng saus tiram untuk rasa manis gurih yang alami."
+      },
+      "makanan12": {
+        "title": "Sate Ulat Sagu",
+        "desc": "Kuliner ekstrem khas Papua yang terbuat dari ulat sagu yang dibakar seperti sate, kaya akan protein tinggi dengan rasa gurih manis bertekstur kenyal di dalam."
+      },
+      "makanan13": {
+        "title": "Ikan Bakar Manokwari",
+        "desc": "Ikan bakar khas Papua Barat dengan bumbu siram kasar berupa ulekan cabai mentah pedas membakar khas Manokwari yang kaya rasa bawang merah."
+      }
     },
     "sumatera": {
       "title": "Keagungan Kuliner Sumatera",
-      "subtitle": "Sensasi pedas, gurih, dan rempah tajam yang memanjakan lidah"
+      "subtitle": "Sensasi pedas, gurih, dan rempah tajam yang memanjakan lidah",
+      "makanan1": {
+        "title": "Rendang",
+        "desc": "Daging sapi yang dimasak perlahan dengan santan dan campuran rempah khas Minangkabau hingga kering dan berwarna cokelat gelap, menghasilkan cita rasa pedas dan gurih yang kaya."
+      },
+      "makanan2": {
+        "title": "Pempek",
+        "desc": "Makanan khas Palembang berbahan dasar ikan dan sagu yang disajikan dengan kuah cuko yang pedas, asam, dan manis."
+      },
+      "makanan3": {
+        "title": "Mie Aceh",
+        "desc": "Mie kuning tebal khas Aceh berbumbu rempah kari yang kuat, disajikan dalam bentuk goreng, tumis, atau kuah dengan irisan daging atau seafood."
+      },
+      "makanan4": {
+        "title": "Bika Ambon",
+        "desc": "Kue tradisional khas Medan dengan tekstur bersarang yang kenyal dan berongga, memiliki aroma pandan, serai, dan santan yang harum dan manis."
+      },
+      "makanan5": {
+        "title": "Mie Sagu",
+        "desc": "Mie kenyal khas Riau yang terbuat dari tepung sagu, dimasak dengan bumbu pedas gurih serta dicampur taoge, ikan teri, dan daun kucai."
+      },
+      "makanan6": {
+        "title": "Sate Padang",
+        "desc": "Sate daging atau lidah sapi khas Minang dengan siraman kuah kuning kental berbumbu rempah pedas yang hangat dan aromatik."
+      },
+      "makanan7": {
+        "title": "Pendap",
+        "desc": "Makanan khas Bengkulu berbahan dasar ikan yang dibumbui rempah pedas gurih, dibungkus berlapis daun talas lalu dikukus hingga matang."
+      },
+      "makanan8": {
+        "title": "Seruit",
+        "desc": "Makanan khas Lampung berupa ikan bakar yang disajikan dengan sambal terasi, tempoyak (durian fermentasi), dan lalapan segar."
+      },
+      "makanan9": {
+        "title": "Gulai Belacan",
+        "desc": "Hidangan berkuah santan kental khas Riau dengan bahan dasar udang yang dibumbui terasi (belacan), asam jawa, dan cabai merah."
+      },
+      "makanan10": {
+        "title": "Ayam Tangkap",
+        "desc": "Ayam goreng khas Aceh yang digoreng garing bersama berbagai macam daun aromatik seperti daun kari dan daun pandan muda."
+      }
     }
   },
   "Footer": {
@@ -55,5 +267,10 @@
     "rights": "Semua hak dilindungi undang-undang.",
     "privacy": "Kebijakan Privasi",
     "terms": "Syarat & Ketentuan"
+  },
+
+  "DomeGallery": {
+    "frontHint": "Klik gambar untuk melihat deskripsi",
+    "backHint": "Klik untuk melihat gambar kembali"
   }
 }

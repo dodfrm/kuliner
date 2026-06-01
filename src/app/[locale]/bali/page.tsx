@@ -1,18 +1,23 @@
-import RegionGalleryPage from "@/components/RegionGalleryPage";
+"use client";
 
-const BALI_IMAGES = [
-  { src: "https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=800&auto=format&fit=crop", alt: "Sate Lilit" },
-  { src: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?q=80&w=800&auto=format&fit=crop", alt: "Nasi Campur Bali" },
-  { src: "https://images.unsplash.com/photo-1626200419199-391ae4be7a40?q=80&w=800&auto=format&fit=crop", alt: "Ayam Betutu" },
-  { src: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop", alt: "Lawar" },
-  { src: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?q=80&w=800&auto=format&fit=crop", alt: "Sambal Matah" },
-  { src: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop", alt: "Jaje Bali" },
-  { src: "https://images.unsplash.com/photo-1534482421-64566f976cfa?q=80&w=800&auto=format&fit=crop", alt: "Ikan Bakar Jimbaran" },
-  { src: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop", alt: "Kopi Bali Kintamani" },
-  { src: "https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=800&auto=format&fit=crop", alt: "Urab Sayur" },
-  { src: "https://images.unsplash.com/photo-1519985176271-adb1088fa94c?q=80&w=800&auto=format&fit=crop", alt: "Buah Segar Bali" }
-];
+import RegionGalleryPage from "@/components/RegionGalleryPage";
+import { useTranslations } from "next-intl";
 
 export default function BaliPage() {
+  const t = useTranslations("Regions");
+
+  const BALI_IMAGES = [
+    { src: "/makanan/25.png", title: t("bali.makanan1.title"), description: t("bali.makanan1.desc") },
+    { src: "/makanan/26.png", title: t("bali.makanan2.title"), description: t("bali.makanan2.desc") },
+    { src: "/makanan/27.png", title: t("bali.makanan3.title"), description: t("bali.makanan3.desc") },
+    { src: "/makanan/28.png", title: t("bali.makanan4.title"), description: t("bali.makanan4.desc") },
+    { src: "/makanan/29.png", title: t("bali.makanan5.title"), description: t("bali.makanan5.desc") },
+    { src: "/makanan/30.png", title: t("bali.makanan6.title"), description: t("bali.makanan6.desc") },
+    { src: "/makanan/31.png", title: t("bali.makanan7.title"), description: t("bali.makanan7.desc") },
+    { src: "/makanan/32.png", title: t("bali.makanan8.title"), description: t("bali.makanan8.desc") },
+    { src: "/makanan/33.png", title: t("bali.makanan9.title"), description: t("bali.makanan9.desc") },
+    { src: "/makanan/34.png", title: t("bali.makanan10.title"), description: t("bali.makanan10.desc") },
+  ];
+
   return <RegionGalleryPage regionKey="bali" images={BALI_IMAGES} />;
 }

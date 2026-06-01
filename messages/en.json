@@ -30,23 +30,235 @@
     "back": "Back to Home",
     "bali": {
       "title": "Richness of Balinese Cuisine",
-      "subtitle": "Traditional spice-rich delicacies from the Island of Gods"
+      "subtitle": "Traditional spice-rich delicacies from the Island of Gods",
+      "makanan1": {
+        "title": "Ayam Betutu",
+        "desc": "A traditional Balinese dish consisting of a whole chicken stuffed with rich 'bumbu genep' spices, wrapped in banana leaves, and slow-steamed or roasted until tender and flavorful."
+      },
+      "makanan2": {
+        "title": "Sate Lilit",
+        "desc": "A unique Balinese satay made from minced meat (chicken, fish, or pork) mixed with grated coconut and traditional spices, wrapped around lemongrass skewers or bamboo before grilling."
+      },
+      "makanan3": {
+        "title": "Babi Guling",
+        "desc": "A celebrated Balinese spit-roasted pig stuffed with local spices ('base genep'), slowly roasted to achieve a super crispy skin and incredibly tender, aromatic meat."
+      },
+      "makanan4": {
+        "title": "Ayam Taliwang",
+        "desc": "A famous dish from Lombok featuring tender young free-range chicken, grilled or fried and glazed with a fiery chili, garlic, lesser galangal, and shrimp paste marinade."
+      },
+      "makanan5": {
+        "title": "Pelecing Kangkung",
+        "desc": "A refreshing spicy water spinach salad from Lombok and Bali, served cold with a raw, fiery chili-tomato-shrimp paste sauce and a squeeze of key lime."
+      },
+      "makanan6": {
+        "title": "Se'i Sapi",
+        "desc": "A traditional smoked beef delicacy from Kupang (NTT) sliced thinly and smoked slowly using local 'kosambi' wood, creating a distinctive smoky aroma and savory flavor."
+      },
+      "makanan7": {
+        "title": "Sate Rembiga",
+        "desc": "A legendary sweet and spicy beef satay from Lombok, marinated in a rich mixture of chilies, palm sugar, and local spices before being grilled to perfection."
+      },
+      "makanan8": {
+        "title": "Jagung Bose",
+        "desc": "A comforting traditional NTT porridge made of crushed white corn, slow-cooked with various beans, sweet pumpkin, and rich coconut milk."
+      },
+      "makanan9": {
+        "title": "Catemak Jagung",
+        "desc": "A nutritious NTT corn soup cooked with peanuts, green beans, and mixed green vegetables, delivering a hearty and savory traditional flavor."
+      },
+      "makanan10": {
+        "title": "Lawar",
+        "desc": "A traditional Balinese salad-like mixture of boiled vegetables, grated coconut, and minced meat seasoned with local spices, sometimes enriched with fresh blood in its authentic form."
+      }
     },
     "jawa": {
       "title": "Savory Taste of Javanese Cuisine",
-      "subtitle": "Authentic sweet, savory, and legendary flavors"
+      "subtitle": "Authentic sweet, savory, and legendary flavors",
+      "makanan1": {
+        "title": "Gudeg",
+        "desc": "A traditional Yogyakarta dish made of young jackfruit slow-cooked for hours with coconut milk, palm sugar, and spices, resulting in a sweet and tender delicacy."
+      },
+      "makanan2": {
+        "title": "Rawon",
+        "desc": "A traditional East Javanese black beef soup flavored with black nuts (kluwek) as the main seasoning, producing a unique savory dark broth."
+      },
+      "makanan3": {
+        "title": "Nasi Liwet",
+        "desc": "Savory coconut rice from Solo cooked in chicken broth, served with chayote squash, shredded chicken, marbled egg, and thick coconut cream paste."
+      },
+      "makanan4": {
+        "title": "Kerak Telor",
+        "desc": "A traditional Betawi spicy omelette made of eggs pan-fried with glutinous rice, toasted shredded coconut (serundeng), and dried shrimp."
+      },
+      "makanan5": {
+        "title": "Tahu Tek",
+        "desc": "An East Javanese dish from Surabaya featuring fried tofu, rice cakes, potatoes, and bean sprouts smothered in a savory, thick peanut-petis (shrimp paste) sauce."
+      },
+      "makanan6": {
+        "title": "Rujak Cingur",
+        "desc": "A unique East Javanese salad combining fresh fruits, boiled vegetables, tofu, tempe, and cooked beef muzzle (cingur), drizzled with shrimp paste sauce."
+      },
+      "makanan7": {
+        "title": "Nasi Timbel",
+        "desc": "A Sundanese meal of hot steamed rice wrapped in a banana leaf, served with fried chicken, tofu, tempe, fresh raw vegetables, and spicy chili sauce."
+      },
+      "makanan8": {
+        "title": "Lumpia",
+        "desc": "A signature spring roll from Semarang filled with savory-sweet bamboo shoots, eggs, and chicken or shrimp, fried to golden crispiness."
+      },
+      "makanan9": {
+        "title": "Tongseng",
+        "desc": "A central Javanese meat stew (mutton or beef) in a spiced curry-like broth, sweetened with sweet soy sauce and cooked with cabbage, tomatoes, and bird's eye chilies."
+      },
+      "makanan10": {
+        "title": "Soto Lamongan",
+        "desc": "A signature chicken soup from East Java in a clear yellow savory broth, topped with koya powder (ground prawn crackers and fried garlic)."
+      }
     },
     "kalimantan": {
       "title": "Flavors of Kalimantan",
-      "subtitle": "Unique riverine dishes and equatorial spices of the line"
+      "subtitle": "Unique riverine dishes and equatorial spices of the line",
+      "makanan1": {
+        "title": "Soto Banjar",
+        "desc": "A signature chicken soup of the Banjar people in South Kalimantan, featuring a fragrant broth spiced with cinnamon, nutmeg, and cloves, served with potato patties and rice cakes."
+      },
+      "makanan2": {
+        "title": "Ketupat Kandangan",
+        "desc": "A traditional South Kalimantan dish of rice cakes served in a rich, savory yellow coconut milk broth, accompanied by a piece of slow-smoked snakehead fish (haruan)."
+      },
+      "makanan3": {
+        "title": "Choipan",
+        "desc": "A savory Pontianak steamed dumpling made of soft rice flour skin filled with seasoned shredded jicama, dried shrimp, or chives, topped with fried garlic and served with sweet-sour chili sauce."
+      },
+      "makanan4": {
+        "title": "Bubur Pedas",
+        "desc": "A traditional Sambas (West Kalimantan) spicy porridge made of roasted ground rice cooked with rich local herbs, various green vegetables, topped with fried anchovies and peanuts."
+      },
+      "makanan5": {
+        "title": "Pengkang",
+        "desc": "A West Kalimantan snack of savory glutinous rice stuffed with dried shrimp, wrapped in a banana leaf cone, clamped with bamboo, and grilled over hot charcoal."
+      },
+      "makanan6": {
+        "title": "Manday",
+        "desc": "A unique Banjar dish made from fermented cempedak (jackfruit relative) inner rind, which is typically pan-fried or stir-fried with chilies and shallots for a savory, tangy flavor."
+      },
+      "makanan7": {
+        "title": "Nasi Kuning Samarinda",
+        "desc": "Fragrant yellow rice from East Kalimantan, distinctively served with tender snakehead fish cooked in a rich, sweet, and savory red chili glaze (bumbu habang)."
+      },
+      "makanan8": {
+        "title": "Gance Ruan",
+        "desc": "A Kutai signature dish of grilled snakehead fish smothered in 'gance' sambal, a fiery, savory, and aromatic onion-chili relish."
+      },
+      "makanan9": {
+        "title": "Juhu Singkah",
+        "desc": "A traditional Dayak soup featuring tender rattan shoots cooked in a yellow coconut milk broth, offering a unique blend of savory, herbal, and slightly bitter refreshing flavors."
+      },
+      "makanan10": {
+        "title": "Kepiting Soka",
+        "desc": "A North Kalimantan delicacy of crispy deep-fried soft-shell crab, served with a choice of spicy-sweet Padang sauce or rich salted egg yolk glaze."
+      }
     },
     "maluku": {
       "title": "Exotic Maluku & Papua Cuisine",
-      "subtitle": "Magical taste of indigenous spices and seafood from the east"
+      "subtitle": "Magical taste of indigenous spices and seafood from the east",
+      "makanan1": {
+        "title": "Ikan Kuah Kuning",
+        "desc": "A signature Maluku fish soup cooked in a bright yellow turmeric broth infused with lemongrass, lime leaves, and sour starfruit for a fresh, tangy taste."
+      },
+      "makanan2": {
+        "title": "Papeda",
+        "desc": "A traditional staple food of Papua and Maluku made of fresh sago flour cooked into a thick, gelatinous porridge, traditionally eaten with yellow fish soup."
+      },
+      "makanan3": {
+        "title": "Gohu Ikan",
+        "desc": "The 'sashimi' of Ternate (North Maluku) featuring fresh raw tuna or skipjack fish cubes seasoned with key lime juice, salt, fresh basil, and finished with hot coconut oil and toasted peanuts."
+      },
+      "makanan4": {
+        "title": "Nasi Lapola",
+        "desc": "A savory traditional Maluku rice dish cooked together with black-eyed peas (kacang tolo) and grated coconut."
+      },
+      "makanan5": {
+        "title": "Kohu-Kohu",
+        "desc": "A refreshing Maluku salad similar to Javanese urap, combining shredded smoked skipjack tuna (cakalang asar) with grated coconut, long beans, bean sprouts, and key lime juice."
+      },
+      "makanan6": {
+        "title": "Sambal Colo-Colo",
+        "desc": "A legendary spicy condiment from Maluku made of chopped bird's eye chilies, shallots, green tomatoes, key lime juice, and a dash of sweet soy sauce or coconut oil."
+      },
+      "makanan7": {
+        "title": "Kue Bagea",
+        "desc": "A traditional dry sago cookie from Maluku and Papua, infused with cinnamon, cloves, and chopped canary nuts (kenari) for a crunchy, fragrant treat."
+      },
+      "makanan8": {
+        "title": "Woku Komo-Komo",
+        "desc": "A traditional Maluku dish made of seasoned sago paste mixed with spiced fish entrails, wrapped in woka leaves, and slow-grilled over hot coals."
+      },
+      "makanan9": {
+        "title": "Bubur Ne",
+        "desc": "A sweet dessert from Maluku featuring colorful sago pearls cooked in sweet coconut milk and palm sugar syrup, infused with pandan leaves."
+      },
+      "makanan10": {
+        "title": "Ikan Asar",
+        "desc": "Whole skipjack or mackerel tuna from Maluku, skewered and hot-smoked over coconut husks until dry, giving it a strong smoky aroma and firm, savory flesh."
+      },
+      "makanan11": {
+        "title": "Udang Selingkuh",
+        "desc": "A unique freshwater crayfish from Wamena (Papua) named for its large crab-like claws, typically boiled or fried in oyster sauce for a naturally sweet flavor."
+      },
+      "makanan12": {
+        "title": "Sate Ulat Sagu",
+        "desc": "A high-protein traditional Papuan delicacy of sago palm grubs skewered and grilled, offering a savory-sweet taste and a rich, creamy texture."
+      },
+      "makanan13": {
+        "title": "Ikan Bakar Manokwari",
+        "desc": "A signature grilled fish from West Papua topped with a raw, fiery, and aromatic crushed red chili and shallot paste typical of Manokwari."
+      }
     },
     "sumatera": {
       "title": "Grandeur of Sumatran Cuisine",
-      "subtitle": "Bold, spicy, and rich savory flavors that entice the palate"
+      "subtitle": "Bold, spicy, and rich savory flavors that entice the palate",
+      "makanan1": {
+        "title": "Rendang",
+        "desc": "Slow-cooked beef simmered in coconut milk and a rich blend of Minangkabau spices until dry and dark brown, delivering a deep, savory, and spicy flavor profile."
+      },
+      "makanan2": {
+        "title": "Pempek",
+        "desc": "A Palembang savory fish cake made of ground fish and tapioca, served with 'cuko', a rich sweet, sour, and spicy dipping sauce."
+      },
+      "makanan3": {
+        "title": "Mie Aceh",
+        "desc": "Thick yellow noodles from Aceh cooked in a rich, aromatic curry-like spice paste, served fried, sautéed, or in soup with beef or seafood."
+      },
+      "makanan4": {
+        "title": "Bika Ambon",
+        "desc": "A traditional yeast-leavened cake from Medan known for its spongy, honeycomb-like texture and sweet aroma of pandan, lemongrass, and coconut milk."
+      },
+      "makanan5": {
+        "title": "Mie Sagu",
+        "desc": "Chewy noodles from Riau made from sago starch, stir-fried with savory and spicy spices, mixed with bean sprouts, anchovies, and chives."
+      },
+      "makanan6": {
+        "title": "Sate Padang",
+        "desc": "Minangkabau beef or tongue skewers served with a thick, warm, yellow sauce rich in aromatic and spicy herbs."
+      },
+      "makanan7": {
+        "title": "Pendap",
+        "desc": "A traditional Bengkulu fish dish seasoned with rich, spicy herbs, wrapped in multiple layers of taro leaves, and steamed to perfection."
+      },
+      "makanan8": {
+        "title": "Seruit",
+        "desc": "A Lampung dish featuring grilled fish served with shrimp paste sambal, tempoyak (fermented durian paste), and fresh raw vegetables."
+      },
+      "makanan9": {
+        "title": "Gulai Belacan",
+        "desc": "A rich shrimp curry from Riau cooked in a thick coconut milk sauce seasoned with shrimp paste (belacan), tamarind, and red chilies."
+      },
+      "makanan10": {
+        "title": "Ayam Tangkap",
+        "desc": "A signature Acehnese deep-fried chicken dish tossed and fried with aromatic herbs like curry leaves and young pandan leaves."
+      }
     }
   },
   "Footer": {
@@ -57,5 +269,10 @@
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+
+  "DomeGallery": {
+    "frontHint": "Click the image to see the description",
+    "backHint": "Click to view the image again"
   }
 }

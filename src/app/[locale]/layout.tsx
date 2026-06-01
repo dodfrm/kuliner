@@ -55,7 +55,7 @@ export default async function RootLayout({
           zIndex={9999}
           bgColor="#18181b"
           loadingText="Udah Makan Belum?" />
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" enableSystem>
             {children}
             <SpringMouseFollow global />
           </ThemeProvider>

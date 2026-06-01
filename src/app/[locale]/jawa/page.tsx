@@ -1,18 +1,23 @@
-import RegionGalleryPage from "@/components/RegionGalleryPage";
+"use client";
 
-const JAWA_IMAGES = [
-  { src: "https://images.unsplash.com/photo-1603133872878-685f58884a28?q=80&w=800&auto=format&fit=crop", alt: "Nasi Tumpeng" },
-  { src: "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=800&auto=format&fit=crop", alt: "Bakso Jawa" },
-  { src: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=800&auto=format&fit=crop", alt: "Gudeg Yogyakarta" },
-  { src: "https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=800&auto=format&fit=crop", alt: "Soto Ayam" },
-  { src: "https://images.unsplash.com/photo-1529042410759-befb1204b468?q=80&w=800&auto=format&fit=crop", alt: "Sate Madura" },
-  { src: "https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=800&auto=format&fit=crop", alt: "Gado-Gado" },
-  { src: "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?q=80&w=800&auto=format&fit=crop", alt: "Tempe Mendoan" },
-  { src: "https://images.unsplash.com/photo-1497534446932-c925b458314e?q=80&w=800&auto=format&fit=crop", alt: "Es Dawet Ayu" },
-  { src: "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=800&auto=format&fit=crop", alt: "Mie Goreng Jawa" },
-  { src: "https://images.unsplash.com/photo-1553618551-fba689030290?q=80&w=800&auto=format&fit=crop", alt: "Rujak Cingur" }
-];
+import RegionGalleryPage from "@/components/RegionGalleryPage";
+import { useTranslations } from "next-intl";
 
 export default function JawaPage() {
+  const t = useTranslations("Regions");
+
+  const JAWA_IMAGES = [
+    { src: "/makanan/15.png", title: t("jawa.makanan1.title"), description: t("jawa.makanan1.desc") },
+    { src: "/makanan/16.png", title: t("jawa.makanan2.title"), description: t("jawa.makanan2.desc") },
+    { src: "/makanan/17.png", title: t("jawa.makanan3.title"), description: t("jawa.makanan3.desc") },
+    { src: "/makanan/18.png", title: t("jawa.makanan4.title"), description: t("jawa.makanan4.desc") },
+    { src: "/makanan/19.png", title: t("jawa.makanan5.title"), description: t("jawa.makanan5.desc") },
+    { src: "/makanan/20.png", title: t("jawa.makanan6.title"), description: t("jawa.makanan6.desc") },
+    { src: "/makanan/21.png", title: t("jawa.makanan7.title"), description: t("jawa.makanan7.desc") },
+    { src: "/makanan/22.png", title: t("jawa.makanan8.title"), description: t("jawa.makanan8.desc") },
+    { src: "/makanan/23.png", title: t("jawa.makanan9.title"), description: t("jawa.makanan9.desc") },
+    { src: "/makanan/24.png", title: t("jawa.makanan10.title"), description: t("jawa.makanan10.desc") },
+  ];
+
   return <RegionGalleryPage regionKey="jawa" images={JAWA_IMAGES} />;
 }

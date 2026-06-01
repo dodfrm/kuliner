@@ -2,8 +2,11 @@
 
 import { useEffect, useMemo, useRef, useCallback } from 'react';
 import { useGesture } from '@use-gesture/react';
+import { useTranslations } from 'next-intl';
 
-type ImageItem = string | { src: string; alt?: string };
+type ImageItem =
+  | string
+  | { src: string; alt?: string; title?: string; description?: string };
 
 type DomeGalleryProps = {
   images?: ImageItem[];
@@ -28,6 +31,8 @@ type DomeGalleryProps = {
 type ItemDef = {
   src: string;
   alt: string;
+  title: string;
+  description: string;
   x: number;
   y: number;
   sizeX: number;
@@ -37,31 +42,45 @@ type ItemDef = {
 const DEFAULT_IMAGES: ImageItem[] = [
   {
     src: 'https://images.unsplash.com/photo-1755331039789-7e5680e26e8f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Abstract art'
+    alt: 'Abstract art',
+    title: 'Visual Abstrak Modern',
+    description: 'Eksplorasi warna dan bentuk dalam seni kontemporer.'
   },
   {
     src: 'https://images.unsplash.com/photo-1755569309049-98410b94f66d?q=80&w=772&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Modern sculpture'
+    alt: 'Modern sculpture',
+    title: 'Eksplorasi Struktur',
+    description: 'Bentuk geometris yang berpadu dengan pencahayaan dramatis.'
   },
   {
     src: 'https://images.unsplash.com/photo-1755497595318-7e5e3523854f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Digital artwork'
+    alt: 'Digital artwork',
+    title: 'Karya Digital Minimalis',
+    description: 'Penggunaan ruang negatif untuk menonjolkan fokus utama.'
   },
   {
     src: 'https://images.unsplash.com/photo-1755353985163-c2a0fe5ac3d8?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Contemporary art'
+    alt: 'Contemporary art',
+    title: 'Seni Kontemporer',
+    description: 'Kombinasi elemen tradisional dan digital dalam satu medium.'
   },
   {
     src: 'https://images.unsplash.com/photo-1745965976680-d00be7dc0377?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Geometric pattern'
+    alt: 'Geometric pattern',
+    title: 'Pola Simetris',
+    description: 'Keselarasan repetisi visual yang memanjakan mata.'
   },
   {
     src: 'https://images.unsplash.com/photo-1752588975228-21f44630bb3c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Textured surface'
+    alt: 'Textured surface',
+    title: 'Bermain Tekstur',
+    description: 'Menangkap kedalaman benda-benda fisik dari jarak dekat.'
   },
   {
     src: 'https://pbs.twimg.com/media/Gyla7NnXMAAXSo_?format=jpg&name=large',
-    alt: 'Social media image'
+    alt: 'Social media image',
+    title: 'Ruang Terbuka',
+    description: 'Sudut pandang arsitektural yang tertangkap lensa.'
   }
 ];
 
@@ -96,7 +115,7 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
 
   const totalSlots = coords.length;
   if (pool.length === 0) {
-    return coords.map(c => ({ ...c, src: '', alt: '' }));
+    return coords.map(c => ({ ...c, src: '', alt: '', title: '', description: '' }));
   }
   if (pool.length > totalSlots) {
     console.warn(
@@ -106,9 +125,14 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
 
   const normalizedImages = pool.map(image => {
     if (typeof image === 'string') {
-      return { src: image, alt: '' };
+      return { src: image, alt: '', title: '', description: '' };
     }
-    return { src: image.src || '', alt: image.alt || '' };
+    return { 
+      src: image.src || '', 
+      alt: image.alt || '', 
+      title: image.title || '', 
+      description: image.description || '' 
+    };
   });
 
   const usedImages = Array.from({ length: totalSlots }, (_, i) => normalizedImages[i % normalizedImages.length]);
@@ -129,7 +153,9 @@ function buildItems(pool: ImageItem[], seg: number): ItemDef[] {
   return coords.map((c, i) => ({
     ...c,
     src: usedImages[i].src,
-    alt: usedImages[i].alt
+    alt: usedImages[i].alt,
+    title: usedImages[i].title,
+    description: usedImages[i].description
   }));
 }
 
@@ -159,6 +185,7 @@ export default function DomeGallery({
   openedImageBorderRadius = '30px',
   grayscale = true
 }: DomeGalleryProps) {
+  const t = useTranslations("DomeGallery");
   const rootRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
   const sphereRef = useRef<HTMLDivElement>(null);
@@ -493,6 +520,7 @@ export default function DomeGallery({
         filter: ${grayscale ? 'grayscale(1)' : 'none'};
       `;
 
+      // Hapus Lightbox UI saat akan tertutup agar animasi rapi
       const originalImg = overlay.querySelector('img');
       if (originalImg) {
         const img = originalImg.cloneNode() as HTMLImageElement;
@@ -587,6 +615,7 @@ export default function DomeGallery({
     const rotX = -parentRot.rotateX - rotationRef.current.x;
     parent.style.setProperty('--rot-y-delta', `${rotY}deg`);
     parent.style.setProperty('--rot-x-delta', `${rotX}deg`);
+    
     const refDiv = document.createElement('div');
     refDiv.className = 'item__image item__image--reference opacity-0';
     refDiv.style.transform = `rotateX(${-parentRot.rotateX}deg) rotateY(${-parentRot.rotateY}deg)`;
@@ -614,16 +643,102 @@ export default function DomeGallery({
     };
     el.style.visibility = 'hidden';
     (el.style as any).zIndex = 0;
+
     const overlay = document.createElement('div');
     overlay.className = 'enlarge';
     overlay.style.cssText = `position:absolute; left:${frameR.left - mainR.left}px; top:${frameR.top - mainR.top}px; width:${frameR.width}px; height:${frameR.height}px; opacity:0; z-index:30; will-change:transform,opacity; transform-origin:top left; transition:transform ${enlargeTransitionMs}ms ease, opacity ${enlargeTransitionMs}ms ease; border-radius:${openedImageBorderRadius}; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.35);`;
+    
     const rawSrc = parent.dataset.src || (el.querySelector('img') as HTMLImageElement)?.src || '';
     const rawAlt = parent.dataset.alt || (el.querySelector('img') as HTMLImageElement)?.alt || '';
+    const rawTitle = parent.dataset.title || '';
+    const rawDesc = parent.dataset.description || '';
+
+    // Create 3D Card Layout to hide description behind the image
+    const cardContainer = document.createElement('div');
+    cardContainer.className = 'lightbox-card-container';
+    
+    const cardInner = document.createElement('div');
+    cardInner.className = 'lightbox-card-inner';
+    
+    const cardFront = document.createElement('div');
+    cardFront.className = 'lightbox-card-front';
+    
     const img = document.createElement('img');
     img.src = rawSrc;
     img.alt = rawAlt;
     img.style.cssText = `width:100%; height:100%; object-fit:cover; filter:${grayscale ? 'grayscale(1)' : 'none'};`;
-    overlay.appendChild(img);
+    cardFront.appendChild(img);
+
+    // Front hint overlay (tells user to click to see details)
+    const frontHint = document.createElement('div');
+    frontHint.className = 'lightbox-front-hint';
+    frontHint.innerHTML = `
+      <span class="hint-text">` + t("frontHint") + `</span>
+    `;
+    cardFront.appendChild(frontHint);
+    
+    const cardBack = document.createElement('div');
+    cardBack.className = 'lightbox-card-back';
+    
+    // Blurred background of the image on the card back
+    const backBg = document.createElement('div');
+    backBg.className = 'lightbox-card-back-bg';
+    backBg.style.backgroundImage = `url(${rawSrc})`;
+    cardBack.appendChild(backBg);
+
+    const backContent = document.createElement('div');
+    backContent.className = 'lightbox-card-back-content';
+
+    if (rawTitle) {
+      const t = document.createElement('h3');
+      t.className = 'lightbox-back-title';
+      t.textContent = rawTitle;
+      backContent.appendChild(t);
+    }
+    if (rawDesc) {
+      const d = document.createElement('p');
+      d.className = 'lightbox-back-desc';
+      d.textContent = rawDesc;
+      backContent.appendChild(d);
+    }
+    
+    // Back hint to flip back
+    const backHint = document.createElement('div');
+    backHint.className = 'lightbox-back-hint';
+    backHint.innerHTML = `
+      <span class="hint-text">` + t("backHint") + `</span>
+    `;
+    backContent.appendChild(backHint);
+
+    cardBack.appendChild(backContent);
+    
+    cardInner.appendChild(cardFront);
+    cardInner.appendChild(cardBack);
+    cardContainer.appendChild(cardInner);
+    overlay.appendChild(cardContainer);
+
+    // Toggle flip class on cardContainer click
+    cardContainer.onclick = (e) => {
+      e.stopPropagation();
+      cardContainer.classList.toggle('flipped');
+    };
+
+    // --- Inject Lightbox Close Button ---
+    const uiContainer = document.createElement('div');
+    uiContainer.className = 'lightbox-ui';
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'lightbox-close';
+    closeBtn.innerHTML = '✕';
+    closeBtn.setAttribute('aria-label', 'Close image');
+    closeBtn.onclick = (e) => {
+      e.stopPropagation();
+      scrimRef.current?.click(); // Manfaatkan event listener klik yang sama dengan scrim
+    };
+    uiContainer.appendChild(closeBtn);
+    overlay.appendChild(uiContainer);
+    // ---------------------------------------------------------
+
     viewerRef.current!.appendChild(overlay);
     const tx0 = tileR.left - frameR.left;
     const ty0 = tileR.top - frameR.top;
@@ -639,7 +754,14 @@ export default function DomeGallery({
       overlay.style.opacity = '1';
       overlay.style.transform = 'translate(0px, 0px) scale(1, 1)';
       rootRef.current?.setAttribute('data-enlarging', 'true');
+      
+      // Delay kemunculan overlay deskripsi sedikit di akhir animasi perbesar
+      setTimeout(() => {
+        uiContainer.classList.add('show');
+      }, enlargeTransitionMs - 50);
+
     }, 16);
+
     const wantsResize = openedImageWidth || openedImageHeight;
     if (wantsResize) {
       const onFirstEnd = (ev: TransitionEvent) => {
@@ -743,16 +865,6 @@ export default function DomeGallery({
       }
     }
     
-    /* body.dg-scroll-lock {
-       position: fixed !important;
-       top: 0;
-       left: 0;
-       width: 100% !important;
-       height: 100% !important;
-       overflow: hidden !important;
-       touch-action: none !important;
-       overscroll-behavior: contain !important;
-    } */
     .item__image {
       position: absolute;
       inset: 10px;
@@ -770,6 +882,197 @@ export default function DomeGallery({
       position: absolute;
       inset: 10px;
       pointer-events: none;
+    }
+
+    /* --- LIGHTBOX UI STYLES --- */
+    .enlarge {
+      pointer-events: auto !important;
+    }
+    .lightbox-ui {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 300ms ease;
+      z-index: 10;
+    }
+    .lightbox-ui.show {
+      opacity: 1;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 0, 0, 0.4);
+      color: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+      pointer-events: auto;
+      display: grid;
+      place-items: center;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .lightbox-close:hover {
+      background: rgba(0, 0, 0, 0.7);
+      transform: scale(1.05);
+    }
+    
+    /* 3D Card Flip Layout */
+    .lightbox-card-container {
+      width: 100%;
+      height: 100%;
+      perspective: 1000px;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+    
+    .lightbox-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .lightbox-card-container.flipped .lightbox-card-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .lightbox-card-front, .lightbox-card-back {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: inherit;
+      overflow: hidden;
+    }
+    
+    .lightbox-card-front {
+      z-index: 2;
+      transform: rotateY(0deg);
+    }
+    
+    .lightbox-card-back {
+      transform: rotateY(180deg);
+      background: rgba(18, 15, 23, 0.85);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 24px;
+      text-align: center;
+      color: white;
+      z-index: 1;
+    }
+    
+    .lightbox-card-back-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: blur(20px) brightness(0.5);
+      transform: scale(1.1);
+      z-index: -1;
+    }
+    
+    .lightbox-card-back-content {
+      position: relative;
+      z-index: 2;
+      max-width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    
+    .lightbox-back-title {
+      margin: 0;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 5vw, 2.25rem);
+      line-height: 1.2;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 12px;
+      width: 100%;
+    }
+    
+    .lightbox-back-desc {
+      margin: 0;
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
+      line-height: 1.6;
+      opacity: 0.95;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+      max-height: 250px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    
+    .lightbox-back-desc::-webkit-scrollbar {
+      width: 6px;
+    }
+    .lightbox-back-desc::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 3px;
+    }
+    .lightbox-back-desc::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 3px;
+    }
+    
+    .lightbox-front-hint {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 10px 20px;
+      border-radius: 30px;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.1);
+      white-space: nowrap;
+      z-index: 5;
+    }
+    
+    .lightbox-card-container:hover .lightbox-front-hint {
+      background: rgba(0, 0, 0, 0.8);
+      transform: translateX(-50%) scale(1.03);
+    }
+    
+    .lightbox-back-hint {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      opacity: 0.7;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.2s;
+    }
+    
+    .lightbox-card-container:hover .lightbox-back-hint {
+      opacity: 1;
+    }
+    
+    .hint-icon {
+      font-size: 1.1rem;
     }
   `;
 
@@ -807,6 +1110,8 @@ export default function DomeGallery({
                   className="sphere-item absolute m-auto"
                   data-src={it.src}
                   data-alt={it.alt}
+                  data-title={it.title}
+                  data-description={it.description}
                   data-offset-x={it.x}
                   data-offset-y={it.y}
                   data-size-x={it.sizeX}

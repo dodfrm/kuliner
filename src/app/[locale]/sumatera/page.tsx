@@ -1,18 +1,23 @@
-import RegionGalleryPage from "@/components/RegionGalleryPage";
+"use client";
 
-const SUMATERA_IMAGES = [
-  { src: "https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?q=80&w=800&auto=format&fit=crop", alt: "Rendang Daging" },
-  { src: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=800&auto=format&fit=crop", alt: "Pempek Palembang" },
-  { src: "https://images.unsplash.com/photo-1529042410759-befb1204b468?q=80&w=800&auto=format&fit=crop", alt: "Sate Padang" },
-  { src: "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=800&auto=format&fit=crop", alt: "Mie Aceh" },
-  { src: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop", alt: "Bika Ambon" },
-  { src: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?q=80&w=800&auto=format&fit=crop", alt: "Nasi Padang" },
-  { src: "https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=800&auto=format&fit=crop", alt: "Soto Medan" },
-  { src: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop", alt: "Kopi Gayo" },
-  { src: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop", alt: "Martabak Mesir" },
-  { src: "https://images.unsplash.com/photo-1534482421-64566f976cfa?q=80&w=800&auto=format&fit=crop", alt: "Gulai Kapau" }
-];
+import RegionGalleryPage from "@/components/RegionGalleryPage";
+import { useTranslations } from "next-intl";
 
 export default function SumateraPage() {
+  const t = useTranslations("Regions");
+
+  const SUMATERA_IMAGES = [
+    { src: "/makanan/5.png", title: t("sumatera.makanan1.title"), description: t("sumatera.makanan1.desc") },
+    { src: "/makanan/6.png", title: t("sumatera.makanan2.title"), description: t("sumatera.makanan2.desc") },
+    { src: "/makanan/7.png", title: t("sumatera.makanan3.title"), description: t("sumatera.makanan3.desc") },
+    { src: "/makanan/8.png", title: t("sumatera.makanan4.title"), description: t("sumatera.makanan4.desc") },
+    { src: "/makanan/9.png", title: t("sumatera.makanan5.title"), description: t("sumatera.makanan5.desc") },
+    { src: "/makanan/10.png", title: t("sumatera.makanan6.title"), description: t("sumatera.makanan6.desc") },
+    { src: "/makanan/11.png", title: t("sumatera.makanan7.title"), description: t("sumatera.makanan7.desc") },
+    { src: "/makanan/12.png", title: t("sumatera.makanan8.title"), description: t("sumatera.makanan8.desc") },
+    { src: "/makanan/13.png", title: t("sumatera.makanan9.title"), description: t("sumatera.makanan9.desc") },
+    { src: "/makanan/14.png", title: t("sumatera.makanan10.title"), description: t("sumatera.makanan10.desc") },
+  ];
+
   return <RegionGalleryPage regionKey="sumatera" images={SUMATERA_IMAGES} />;
 }
