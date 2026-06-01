@@ -57,7 +57,7 @@ export default function RegionGalleryPage({ regionKey, images }: RegionGalleryPa
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
-            <ThemeToggleButton variant="circle" start="center" />
+            <ThemeToggleButton variant="polygon" start="top-left" />
           </div>
         </NavBody>
 
@@ -90,7 +90,7 @@ export default function RegionGalleryPage({ regionKey, images }: RegionGalleryPa
               </span>
               <div className="flex items-center justify-between px-2 w-full gap-4">
                 <LanguageSwitcher className="w-auto justify-start" />
-                <ThemeToggleButton variant="circle" start="center" />
+                <ThemeToggleButton variant="polygon" start="top-left" />
               </div>
             </div>
           </MobileNavMenu>
