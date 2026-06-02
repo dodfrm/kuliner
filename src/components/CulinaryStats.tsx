@@ -77,9 +77,6 @@ export default function CulinaryStats() {
             duration={0.6}
             ease="power2.out"
           >
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wider bg-orange-100 dark:bg-orange-950/50 text-[#ff4500] uppercase mb-4">
-              <IconAward size={14} /> TasteAtlas Awards 23/24
-            </span>
             <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl">
               {t("sectionTitle")}
             </h2>

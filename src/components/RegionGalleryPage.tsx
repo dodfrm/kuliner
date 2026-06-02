@@ -114,7 +114,7 @@ export default function RegionGalleryPage({ regionKey, images }: RegionGalleryPa
           delay={0}
         >
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-2">
-            <span className="bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-b text-neutral-100 bg-clip-text">
               {t(`${regionKey}.title`).split(" ").slice(0, -1).join(" ")}
             </span>{" "}
             <span className="text-[#ff4500]">

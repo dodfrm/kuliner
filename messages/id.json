@@ -14,7 +14,9 @@
     "manis": "Manis?",
     "gurih": "Gurih?",
     "asam": "Asam?",
-    "description": "Temukan keanekaragaman cita rasa kuliner Nusantara dari Sabang sampai Merauke. Mulai petualangan rasamu hari ini!"
+    "description": "Temukan keanekaragaman cita rasa kuliner Nusantara dari Sabang sampai Merauke. Mulai petualangan rasamu hari ini!",
+    "ctaExplore": "Jelajahi Sekarang",
+    "ctaTeam": "Kenali Pendiri Kami"
   },
   "Team": {
     "back": "Kembali ke Beranda",
@@ -356,7 +358,7 @@
   },
   "CulinaryStats": {
     "sectionTitle": "Prestasi Kuliner Dunia",
-    "sectionSubtitle": "Kuliner Indonesia terbukti diakui secara global, menempati posisi terhormat dalam peringkat kuliner dunia.",
+    "sectionSubtitle": "Kuliner Indonesia terbukti diakui secara global, menempati posisi ke-6 dalam peringkat kuliner dunia.",
     "chartTitle": "10 Negara dengan Hidangan Terbaik 2023",
     "chartSource": "Sumber: TasteAtlas Awards 23/24",
     "scoreLabel": "Skor",
