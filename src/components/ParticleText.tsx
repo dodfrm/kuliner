@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useCallback, useState } from "react";
 import { useTheme } from "next-themes";
 
 
@@ -110,7 +110,7 @@ export default function ParticleText({
   ease = 0.05,
 }: ParticleTextProps) {
   const { resolvedTheme } = useTheme();
-  const isDarkTheme = resolvedTheme === "dark";
+  const [isDarkTheme, setIsDarkTheme] = useState(resolvedTheme === "dark");
 
   const canvasRef    = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -118,6 +118,10 @@ export default function ParticleText({
   const particlesRef = useRef<Particle[]>([]);
   const mouseRef     = useRef<MousePosition>({ x: null, y: null });
   const liveRef      = useRef<LiveProps>({ friction, ease, mouseControls });
+
+  useEffect(() => {
+    setIsDarkTheme(resolvedTheme === "dark" || !!containerRef.current?.closest(".dark"));
+  }, [resolvedTheme]);
 
   useEffect(() => {
     liveRef.current = { friction, ease, mouseControls };

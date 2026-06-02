@@ -260,10 +260,46 @@
     },
     "sulawesi": {
       "title": "Kekayaan Kuliner Sulawesi",
-      "subtitle": "Kelezatan kaya bumbu tradisional dari Pulau Dewata",
+      "subtitle": "Kelezatan hidangan kaya rempah dari tanah Sulawesi",
       "makanan1": {
+        "title": "Sop Konro",
+        "desc": "Sup iga sapi khas Makassar dengan kuah berwarna cokelat kehitaman dari kluwek, memiliki cita rasa rempah ketumbar, pala, dan lengkuas yang kaya dan gurih."
+      },
+      "makanan2": {
+        "title": "Ayam Rica-rica",
+        "desc": "Hidangan ayam khas Manado yang dimasak dengan bumbu rica-rica super pedas dari campuran cabai merah, cabai rawit, jahe, serai, dan daun jeruk yang harum segar."
+      },
+      "makanan3": {
         "title": "Coto Makassar",
-        "desc": "Makanan khas Sulawesi Selatan berupa sup daging sapi dengan kuah kental beraroma rempah yang kuat, disajikan dengan ketupat dan taburan bawang goreng."
+        "desc": "Sup tradisional khas Makassar yang terbuat dari jeroan dan daging sapi, direbus lama dengan air cucian beras dan kacang tanah sangrai halus, disajikan dengan ketupat."
+      },
+      "makanan4": {
+        "title": "Tinutuan",
+        "desc": "Bubur sayur khas Manado yang sehat dan padat gizi, terbuat dari beras, labu kuning, singkong, ubi, jagung manis, serta berbagai dedaunan hijau segar."
+      },
+      "makanan5": {
+        "title": "Bubur Manado",
+        "desc": "Variasi bubur gurih Manado yang disajikan hangat dengan pelengkap ikan asin goreng, sambal roa yang pedas khas, dan taburan bawang goreng."
+      },
+      "makanan6": {
+        "title": "Kue Buroncong",
+        "desc": "Kue tradisional khas Makassar berbentuk setengah lingkaran yang dipanggang, terbuat dari adonan tepung terigu, santan, dan parutan kelapa muda yang gurih manis."
+      },
+      "makanan7": {
+        "title": "Es Pallu Butung",
+        "desc": "Hidangan penutup manis khas Sulawesi Selatan berupa potongan pisang raja kukus yang disajikan dengan bubur sumsum lembut, sirup merah, dan es serut."
+      },
+      "makanan8": {
+        "title": "Kapurung",
+        "desc": "Makanan tradisional khas Luwu berupa adonan sagu kental kenyal berbentuk bulat, disajikan dalam kuah kuning asam segar bersama sayuran, ikan, atau udang."
+      },
+      "makanan9": {
+        "title": "Es Pisang Ijo",
+        "desc": "Kudapan manis populer berupa pisang utuh yang dibalut adonan tepung pandan hijau, disajikan bersama bubur sumsum, sirup merah, es batu, dan susu kental manis."
+      },
+      "makanan10": {
+        "title": "Pisang Epe",
+        "desc": "Kuliner pantai khas Makassar berupa pisang kepok yang dijepit hingga pipih lalu dibakar, disajikan dengan siraman saus gula merah cair yang manis harum karamel."
       }
     }
   },

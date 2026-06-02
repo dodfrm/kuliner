@@ -260,13 +260,49 @@
         "desc": "A signature Acehnese deep-fried chicken dish tossed and fried with aromatic herbs like curry leaves and young pandan leaves."
       }
     },
-    "sulawesi":{
+    "sulawesi": {
       "title": "Richness of Sulawesi Cuisine",
-      "subtitle": "Deliciousness of traditional spices from the Island of Paradise",
+      "subtitle": "Savory delights rich in traditional spices from the land of Sulawesi",
       "makanan1": {
+        "title": "Sop Konro",
+        "desc": "A rich and savory beef rib soup from Makassar, cooked in a dark broth flavored with kluwek nuts, coriander, nutmeg, and galangal."
+      },
+      "makanan2": {
+        "title": "Ayam Rica-rica",
+        "desc": "A signature spicy chicken dish from Manado, cooked in a vibrant paste of red chilies, bird's eye chilies, ginger, lemongrass, and fresh lime leaves."
+      },
+      "makanan3": {
         "title": "Coto Makassar",
-        "desc": "A traditional dish from South Sulawesi, it is a beef soup with a thick, aromatic broth, served with compressed rice and fried shallots."
-    }
+        "desc": "A traditional Makassar beef and offal soup simmered in a broth of rice-washing water and finely ground roasted peanuts, served with compressed rice."
+      },
+      "makanan4": {
+        "title": "Tinutuan",
+        "desc": "A nutritious, savory vegetable porridge from Manado made with rice, pumpkin, cassava, sweet potato, sweet corn, and a variety of fresh green leafy vegetables."
+      },
+      "makanan5": {
+        "title": "Bubur Manado",
+        "desc": "A variant of Manado porridge served hot and accompanied by crispy salted fish, spicy smoked fish chili (sambal roa), and fried shallots."
+      },
+      "makanan6": {
+        "title": "Kue Buroncong",
+        "desc": "A traditional half-moon-shaped cake from Makassar, griddled and made from a batter of flour, coconut milk, and grated young coconut."
+      },
+      "makanan7": {
+        "title": "Es Pallu Butung",
+        "desc": "A sweet dessert from South Sulawesi featuring sliced steamed plantains served over smooth rice flour pudding, topped with red syrup and shaved ice."
+      },
+      "makanan8": {
+        "title": "Kapurung",
+        "desc": "A traditional dish from Luwu consisting of chewy, round sago flour balls served in a sour, savory broth filled with mixed vegetables and fish or prawns."
+      },
+      "makanan9": {
+        "title": "Es Pisang Ijo",
+        "desc": "A popular sweet treat of steamed banana wrapped in green pandan-flavored dough, served with rice pudding, red syrup, shaved ice, and condensed milk."
+      },
+      "makanan10": {
+        "title": "Pisang Epe",
+        "desc": "A beachfront classic from Makassar made of pressed, grilled bananas served with a rich, caramelized brown sugar sauce."
+      }
     }
   },
   "Footer": {

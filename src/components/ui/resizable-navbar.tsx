@@ -239,15 +239,24 @@ export const NavbarLogo = () => {
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
       <img
-        className="dark:invert"
+        className="dark:hidden"
         src="/logo.png"
         alt="logo"
         width={35}
         height={35}
       />
-      <div> 
-      <span className="font-bold text-black dark:text-white">Kuliner</span>
-      <span className="font-bold text-red-600 dark:text-red-400">In</span>
+
+      <img
+        className="hidden dark:block"
+        src="/logo-dark.png"
+        alt="logo"
+        width={35}
+        height={35}
+      />
+
+      <div>
+        <span className="font-bold text-black dark:text-white">Kuliner</span>
+        <span className="font-bold text-red-600 dark:text-red-400">In</span>
       </div>
     </a>
   );
