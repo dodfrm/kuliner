@@ -4,6 +4,7 @@ import type React from "react"
 import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion"
 import { useTranslations } from "next-intl"
+import AnimatedContent from "../AnimatedContent"
 
 interface TestimonialItem {
   quote: string
@@ -135,17 +136,43 @@ export function Testimonial() {
       
       {/* Section Header */}
       <div className="relative w-full max-w-5xl z-10 flex flex-col items-center text-center mb-16">
-        <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl">
-          <span className="bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-100 bg-clip-text text-transparent">
-            {t("title").split(" ").slice(0, -1).join(" ")}
-          </span>{" "}
-          <span className="text-[#ff4500]">
-            {t("title").split(" ").slice(-1)[0]}
-          </span>
-        </h2>
-        <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-center max-w-lg mx-auto text-sm sm:text-base">
-          {t("subtitle")}
-        </p>
+        <AnimatedContent
+          distance={100}
+          direction="vertical"
+          reverse={false}
+          duration={0.8}
+          ease="power3.out"
+          initialOpacity={0}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          delay={0}
+        >
+          <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl">
+            <span className="bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-100 bg-clip-text text-transparent">
+              {t("title").split(" ").slice(0, -1).join(" ")}
+            </span>{" "}
+            <span className="text-[#ff4500]">
+              {t("title").split(" ").slice(-1)[0]}
+            </span>
+          </h2>
+        </AnimatedContent>
+        <AnimatedContent
+          distance={100}
+          direction="vertical"
+          reverse={false}
+          duration={0.8}
+          ease="power3.out"
+          initialOpacity={0}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          delay={0.1}
+        >
+          <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-center max-w-lg mx-auto text-sm sm:text-base">
+            {t("subtitle")}
+          </p>
+        </AnimatedContent>
       </div>
 
       <div ref={containerRef} className="relative w-full max-w-5xl" onMouseMove={handleMouseMove}>

@@ -120,7 +120,9 @@ export default function ParticleText({
   const liveRef      = useRef<LiveProps>({ friction, ease, mouseControls });
 
   useEffect(() => {
-    setIsDarkTheme(resolvedTheme === "dark" || !!containerRef.current?.closest(".dark"));
+    const closestDark = containerRef.current?.closest(".dark");
+    const isLocalDark = closestDark && closestDark !== document.documentElement && closestDark !== document.body;
+    setIsDarkTheme(resolvedTheme === "dark" || !!isLocalDark);
   }, [resolvedTheme]);
 
   useEffect(() => {

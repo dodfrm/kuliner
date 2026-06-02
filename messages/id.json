@@ -353,5 +353,21 @@
       "role": "Pecinta Rempah",
       "company": "Rendang Minang"
     }
+  },
+  "CulinaryStats": {
+    "sectionTitle": "Prestasi Kuliner Dunia",
+    "sectionSubtitle": "Kuliner Indonesia terbukti diakui secara global, menempati posisi terhormat dalam peringkat kuliner dunia.",
+    "chartTitle": "10 Negara dengan Hidangan Terbaik 2023",
+    "chartSource": "Sumber: TasteAtlas Awards 23/24",
+    "scoreLabel": "Skor",
+    "newsTitle": "Kuliner Indonesia Makin Diakui Dunia, Tempati Peringkat Ke-6 Hidangan Terbaik",
+    "newsSubtitle": "Pada TasteAtlas Awards 2023, Indonesia berhasil meraih skor 4,57 dan menempati peringkat ke-6 sebagai negara dengan masakan terbaik.",
+    "newsParagraph1": "Panduan wisata kuliner TasteAtlas merilis peringkat tahunan berisikan 100 negara dengan sajian kuliner terbaik di dunia. Indonesia pun menjadi satu-satunya negara di Asia Tenggara yang termasuk dalam jajaran 10 besar negara dengan hidangan terbaik.",
+    "itemSoup": "Sup Terbaik (#4)",
+    "itemSalad": "Salad Terbaik (#2)",
+    "itemFish": "Olahan Ikan Terbaik (#3)",
+    "itemStreetFood": "Street Food Terbaik (#1 & #2)",
+    "itemCondiment": "Kondimen Terbaik (#1)",
+    "readMore": "Baca Selengkapnya di GoodStats"
   }
 }

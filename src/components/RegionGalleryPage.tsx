@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/resizable-navbar";
 import DomeGallery from "@/components/DomeGallery";
 import Footer from "@/components/Footer";
+import AnimatedContent from "./AnimatedContent";
 
 type ImageItem = string | { src: string; alt?: string };
 
@@ -31,12 +32,15 @@ export default function RegionGalleryPage({ regionKey, images }: RegionGalleryPa
 
   const navItems = [
     {
-      name: tNav("features"),
-      link: "/#features",
+      name: tNav("home"),
+      link: "/#home",
     },
     {
       name: tNav("explore"),
       link: "/#explore",
+    },
+    {      name: tNav("experience"),
+      link: "/#experience",
     },
     {
       name: tNav("team"),
@@ -97,17 +101,43 @@ export default function RegionGalleryPage({ regionKey, images }: RegionGalleryPa
 
       {/* Region Title & Subtitle */}
       <div className="relative z-10 text-center pt-32 px-4 select-none pointer-events-none">
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-2">
-          <span className="bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent">
-            {t(`${regionKey}.title`).split(" ").slice(0, -1).join(" ")}
-          </span>{" "}
-          <span className="text-[#ff4500]">
-            {t(`${regionKey}.title`).split(" ").slice(-1)[0]}
-          </span>
-        </h1>
-        <p className="text-xs sm:text-sm text-neutral-400 font-light max-w-xl mx-auto">
-          {t(`${regionKey}.subtitle`)}
-        </p>
+        <AnimatedContent
+          distance={100}
+          direction="vertical"
+          reverse={false}
+          duration={0.8}
+          ease="power3.out"
+          initialOpacity={0}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          delay={0}
+        >
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-2">
+            <span className="bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent">
+              {t(`${regionKey}.title`).split(" ").slice(0, -1).join(" ")}
+            </span>{" "}
+            <span className="text-[#ff4500]">
+              {t(`${regionKey}.title`).split(" ").slice(-1)[0]}
+            </span>
+          </h1>
+        </AnimatedContent>
+        <AnimatedContent
+          distance={100}
+          direction="vertical"
+          reverse={false}
+          duration={0.8}
+          ease="power3.out"
+          initialOpacity={0}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          delay={0.1}
+        >
+          <p className="text-xs sm:text-sm text-neutral-400 font-light max-w-xl mx-auto">
+            {t(`${regionKey}.subtitle`)}
+          </p>
+        </AnimatedContent>
       </div>
 
       {/* Gallery Wrapper */}

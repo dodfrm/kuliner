@@ -25,6 +25,7 @@ export default function Footer() {
     { name: "Sumatera", link: "/sumatera" },
     { name: "Jawa", link: "/jawa" },
     { name: "Kalimantan", link: "/kalimantan" },
+    { name: "Sulawesi", link: "/sulawesi" },
     { name: "Bali & Nusa Tenggara", link: "/bali" },
     { name: "Maluku & Papua", link: "/maluku" },
   ];
@@ -35,10 +36,6 @@ export default function Footer() {
     { name: tNav("experience"), link: "#experience" },
     { name: tNav("team"), link: "#team" },
   ];
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   return (
     <footer className="relative w-full bg-neutral-50 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-200 border-t border-neutral-200/80 dark:border-neutral-800/80 overflow-hidden font-sans transition-colors duration-300">
@@ -76,7 +73,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-4 flex flex-col space-y-6">
             <div className="flex items-center space-x-2">
-              <span className="text-2xl font-black tracking-tight text-neutral-900 dark:text-white">
+              <span className="text-2xl tracking-tight text-black dark:text-neutral-100">
                 Kuliner<span className="text-[#ff4500]">In</span>
               </span>
             </div>

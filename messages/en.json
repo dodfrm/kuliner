@@ -355,5 +355,21 @@
       "role": "Spice Lover",
       "company": "Rendang Minang"
     }
+  },
+  "CulinaryStats": {
+    "sectionTitle": "Global Culinary Achievements",
+    "sectionSubtitle": "Indonesian cuisine is globally recognized, securing an honorable position in the world culinary rankings.",
+    "chartTitle": "10 Countries with the Best Dishes 2023",
+    "chartSource": "Source: TasteAtlas Awards 23/24",
+    "scoreLabel": "Score",
+    "newsTitle": "Indonesian Cuisine Gains Global Acclaim, Ranks 6th in Best Dishes",
+    "newsSubtitle": "At the 2023 TasteAtlas Awards, Indonesia scored 4.57, ranking 6th as the country with the best cuisine.",
+    "newsParagraph1": "Culinary guide TasteAtlas released its annual rankings of the top 100 countries with the best food. Indonesia emerged as the sole Southeast Asian representative in the top 10.",
+    "itemSoup": "Best Soup (#4)",
+    "itemSalad": "Best Salad (#2)",
+    "itemFish": "Best Fish Dish (#3)",
+    "itemStreetFood": "Best Street Food (#1 & #2)",
+    "itemCondiment": "Best Condiment (#1)",
+    "readMore": "Read Full Article on GoodStats"
   }
 }

@@ -15,22 +15,22 @@ import FlowingMenu from "@/components/FlowingMenu";
 import Lanyard from "@/components/Lanyard";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import RotatingText from "@/components/RotatingText";
-import { motion } from "motion/react";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import { Testimonial } from "@/components/ui/design-testimonial";
 import Footer from "@/components/Footer";
 import { useTheme } from "next-themes";
 import { ThemeToggleButton } from "@/components/ui/skiper-ui/skiper26";
 import { IconBrandGithub, IconBrandLinkedin, IconBrandInstagram } from "@tabler/icons-react";
+import AnimatedContent from "@/components/AnimatedContent";
+import CulinaryStats from "@/components/CulinaryStats";
 
 const daerah = [
-  { link: '/sumatera', text: 'Sumatera', image: 'https://picsum.photos/600/400?random=1' },
-  { link: '/jawa', text: 'Jawa', image: 'https://picsum.photos/600/400?random=2' },
-  { link: '/kalimantan', text: 'Kalimantan', image: 'https://picsum.photos/600/400?random=3' },
-  {link : '/sulawesi', text: 'Sulawesi', image: 'https://picsum.photos/600/400?random=6' },
-  { link: '/bali', text: 'Bali & Nusra', image: 'https://picsum.photos/600/400?random=4' },
-  { link: '/maluku', text: 'Maluku & Papua', image: 'https://picsum.photos/600/400?random=5' },
+  { link: '/sumatera', text: 'Sumatera', image: '/sumatera.png' },
+  { link: '/jawa', text: 'Jawa', image: '/jawa.png' },
+  { link: '/kalimantan', text: 'Kalimantan', image: '/kalimantan.png' },
+  {link : '/sulawesi', text: 'Sulawesi', image: '/sulawesi.png' },
+  { link: '/bali', text: 'Bali & Nusra', image: '/bali.png' },
+  { link: '/maluku', text: 'Maluku & Papua', image: '/papua.png' },
 ];
 
 export default function Home() {
@@ -107,6 +107,7 @@ export default function Home() {
         </MobileNav>
       </Navbar>
       <HeroParallax products={products} />
+      <CulinaryStats />
       <div id="explore">
         <FlowingMenus />
       </div>
@@ -123,98 +124,75 @@ export default function Home() {
 
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
-    thumbnail:
-      "https://youtu.be/FSqVTcyIbBM",
+    title: "Ayam taliwang",
+    link: "https://youtu.be/Iw_KY_HiQWo",
+    thumbnail: "https://img.youtube.com/vi/Iw_KY_HiQWo/hqdefault.jpg",
   },
   {
-    title: "Cursor",
-    link: "https://cursor.so",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/cursor.png",
+    title: "Bika Ambon",
+    link: "https://youtu.be/yqhgyHGiLBQ",
+    thumbnail: "https://img.youtube.com/vi/yqhgyHGiLBQ/hqdefault.jpg",
   },
   {
-    title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/rogue.png",
-  },
-
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/editorially.png",
+    title: "Gudeg Mercon",
+       link: "https://youtu.be/PtXZ84z1TPQ?si=QL-GOoqiF0ZFrgCG",
+    thumbnail: "https://img.youtube.com/vi/PtXZ84z1TPQ/hqdefault.jpg",
   },
   {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/editrix.png",
+    title: "Seblak",
+    link: "https://youtu.be/Jugx8oq_dH8?si=66QuOmTY8ciNF7Eo",
+    thumbnail: "https://img.youtube.com/vi/Jugx8oq_dH8/hqdefault.jpg",
   },
   {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-  },
-
-  {
-    title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/algochurn.png",
+    title: "Mie Aceh",
+    link: "https://youtu.be/QWG1geJfafs?si=sjrUVueIae8kW2so",
+    thumbnail: "https://img.youtube.com/vi/QWG1geJfafs/hqdefault.jpg",
   },
   {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/aceternityui.png",
+    title: "Sate Maranggi",
+    link: "https://youtu.be/f4XnUn-jEFc?si=CXRep8NZXICXTs0m",
+    thumbnail: "https://img.youtube.com/vi/f4XnUn-jEFc/hqdefault.jpg",
   },
   {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+    title: "Lumpia",
+    link: "https://youtu.be/WkY4Wg8RwB8?si=l6JXnBlvRbNm0t66",
+    thumbnail: "https://img.youtube.com/vi/WkY4Wg8RwB8/hqdefault.jpg",
   },
   {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/smartbridge.png",
+    title: "Es Pisang Ijo",
+    link: "https://youtu.be/fsjPL3NNoBY?si=O6bNOBo4pamrxks4",
+    thumbnail: "https://img.youtube.com/vi/fsjPL3NNoBY/hqdefault.jpg",
   },
   {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/renderwork.png",
-  },
-
-  {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/cremedigital.png",
+    title: "Nasi Kapau",
+    link: "https://youtu.be/3rZ5mr8K1Jw?si=hJEYIjPbcfgBHK2d",
+    thumbnail: "https://img.youtube.com/vi/3rZ5mr8K1Jw/hqdefault.jpg",
   },
   {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+    title: "Coto Makassar",
+    link: "https://youtu.be/oghw7PjOGcI?si=DXiqlchp_2OB-myp",
+    thumbnail: "https://img.youtube.com/vi/oghw7PjOGcI/hqdefault.jpg",
   },
   {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/invoker.png",
+    title: "Bakso Urat",
+    link: "https://youtu.be/XiZi4G3JvSs?si=scKqc7Kx7vv0OE-R",
+    thumbnail: "https://img.youtube.com/vi/XiZi4G3JvSs/hqdefault.jpg",
   },
   {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+    title: "Nasi Padang",
+    link: "https://youtu.be/SXXvNl-w50U?si=q-huKob53xA10dnR",
+    thumbnail: "https://img.youtube.com/vi/SXXvNl-w50U/hqdefault.jpg",
   },
+  {
+    title: "Sate Klopo",
+    link: "https://youtu.be/quBvrc2OYOQ?si=5t64nsw4yIVZjGgw",
+    thumbnail: "https://img.youtube.com/vi/quBvrc2OYOQ/hqdefault.jpg",
+  },
+  {
+    title: "Gulai Ikan Patin",
+    link: "https://youtu.be/8x7ZaG7DD70?si=U3opk9oeRxvMZ4JW",
+    thumbnail: "https://img.youtube.com/vi/8x7ZaG7DD70/hqdefault.jpg",
+  }
 ];
 
 const FlowingMenus = () => {
@@ -231,17 +209,43 @@ const FlowingMenus = () => {
   return (
     <div className="bg-white dark:bg-neutral-950 py-16 border-t border-neutral-100 dark:border-neutral-800/80 transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10 z-10 relative">
-        <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl">
-          <span className="bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-100 bg-clip-text text-transparent">
-            {t("title").split(" ").slice(0, -1).join(" ")}
-          </span>{" "}
-          <span className="text-[#ff4500]">
-            {t("title").split(" ").slice(-1)[0]}
-          </span>
-        </h2>
-        <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-center max-w-lg mx-auto text-sm sm:text-base">
-          {t("subtitle")}
-        </p>
+        <AnimatedContent
+          distance={100}
+          direction="vertical"
+          reverse={false}
+          duration={0.8}
+          ease="power3.out"
+          initialOpacity={0}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          delay={0}
+        >
+          <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl">
+            <span className="bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-100 bg-clip-text text-transparent">
+              {t("title").split(" ").slice(0, -1).join(" ")}
+            </span>{" "}
+            <span className="text-[#ff4500]">
+              {t("title").split(" ").slice(-1)[0]}
+            </span>
+          </h2>
+        </AnimatedContent>
+        <AnimatedContent
+          distance={100}
+          direction="vertical"
+          reverse={false}
+          duration={0.8}
+          ease="power3.out"
+          initialOpacity={0}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          delay={0.1}
+        >
+          <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-center max-w-lg mx-auto text-sm sm:text-base">
+            {t("subtitle")}
+          </p>
+        </AnimatedContent>
       </div>
       <div style={{ height: '400px', position: 'relative' }}>
         <FlowingMenu
@@ -270,17 +274,43 @@ const TeamSection = () => {
 
       {/* Header */}
       <div className="relative w-full max-w-5xl z-10 flex flex-col items-center text-center mb-16">
-        <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl">
-          <span className="bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-100 bg-clip-text text-transparent">
-            {t("title").split(" ").slice(0, -1).join(" ")}
-          </span>{" "}
-          <span className="text-[#ff4500]">
-            {t("title").split(" ").slice(-1)[0]}
-          </span>
-        </h2>
-        <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-center max-w-lg mx-auto text-sm sm:text-base">
-          {t("subtitle")}
-        </p>
+        <AnimatedContent
+          distance={100}
+          direction="vertical"
+          reverse={false}
+          duration={0.8}
+          ease="power3.out"
+          initialOpacity={0}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          delay={0}
+        >
+          <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl">
+            <span className="bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-100 bg-clip-text text-transparent">
+              {t("title").split(" ").slice(0, -1).join(" ")}
+            </span>{" "}
+            <span className="text-[#ff4500]">
+              {t("title").split(" ").slice(-1)[0]}
+            </span>
+          </h2>
+        </AnimatedContent>
+        <AnimatedContent
+          distance={100}
+          direction="vertical"
+          reverse={false}
+          duration={0.8}
+          ease="power3.out"
+          initialOpacity={0}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+          delay={0.1}
+        >
+          <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-center max-w-lg mx-auto text-sm sm:text-base">
+            {t("subtitle")}
+          </p>
+        </AnimatedContent>
       </div>
 
       {/* Cards Container - Swiper/Carousel on Mobile, Grid on Desktop */}
