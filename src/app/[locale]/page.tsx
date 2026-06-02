@@ -27,8 +27,9 @@ const daerah = [
   { link: '/sumatera', text: 'Sumatera', image: 'https://picsum.photos/600/400?random=1' },
   { link: '/jawa', text: 'Jawa', image: 'https://picsum.photos/600/400?random=2' },
   { link: '/kalimantan', text: 'Kalimantan', image: 'https://picsum.photos/600/400?random=3' },
+  {link : '/sulawesi', text: 'Sulawesi', image: 'https://picsum.photos/600/400?random=6' },
   { link: '/bali', text: 'Bali & Nusa Tenggara', image: 'https://picsum.photos/600/400?random=4' },
-  { link: '/maluku', text: 'Maluku & Papua', image: 'https://picsum.photos/600/400?random=5' }
+  { link: '/maluku', text: 'Maluku & Papua', image: 'https://picsum.photos/600/400?random=5' },
 ];
 
 export default function Home() {

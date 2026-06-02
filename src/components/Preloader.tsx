@@ -238,6 +238,26 @@ function StairsPreloader({
           />
         </div>
       )}
+
+      {/* Progress Bar at the bottom */}
+      <div 
+        className="absolute bottom-0 left-0 right-0 h-1 bg-white/10 z-20"
+        style={{ opacity: textOpacity, transition: "opacity 0.4s ease" }}
+      >
+        <div
+          className="h-full bg-white transition-[width] duration-75 ease-linear shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+
+      {/* Percentage text at bottom-right */}
+      <div
+        className="absolute bottom-4 right-8 z-20 font-mono text-white/70 font-semibold select-none flex items-baseline gap-0.5"
+        style={{ opacity: textOpacity, transition: "opacity 0.4s ease" }}
+      >
+        <span className="text-2xl md:text-3xl font-black text-white">{Math.floor(progress)}</span>
+        <span className="text-xs md:text-sm font-bold text-white/50">%</span>
+      </div>
     </div>
   );
 }
@@ -454,10 +474,16 @@ export function Preloader({
   const pathname = usePathname();
   const prevPathname = useRef(pathname);
 
+  const resolvedLoading = isControlled ? loading : localLoading;
+
   // Phase machine for stairs: enter → hold → exit → done
-  const [phase, setPhase] = useState<Phase>("done");
-  const [isVisible, setIsVisible] = useState(false);
-  const [showChildren, setShowChildren] = useState(isControlled ? !loading : false);
+  const [phase, setPhase] = useState<Phase>(
+    resolvedLoading
+      ? (variant === "stairs" ? "enter" : "hold")
+      : "done"
+  );
+  const [isVisible, setIsVisible] = useState(!!resolvedLoading);
+  const [showChildren, setShowChildren] = useState(!resolvedLoading);
 
   // For non-stairs variants
   const [isExiting, setIsExiting] = useState(false);
@@ -508,8 +534,6 @@ export function Preloader({
       }, exitWait);
     }
   }, [variant, useAnimation, totalExitMs, onComplete, onLoadingComplete, isControlled]);
-
-  const resolvedLoading = isControlled ? loading : localLoading;
 
   const progress = useProgress(
     resolvedLoading && isVisible && (variant !== "stairs" || phase === "hold"),

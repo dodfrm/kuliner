@@ -257,6 +257,14 @@
         "title": "Ayam Tangkap",
         "desc": "Ayam goreng khas Aceh yang digoreng garing bersama berbagai macam daun aromatik seperti daun kari dan daun pandan muda."
       }
+    },
+    "sulawesi": {
+      "title": "Kekayaan Kuliner Sulawesi",
+      "subtitle": "Kelezatan kaya bumbu tradisional dari Pulau Dewata",
+      "makanan1": {
+        "title": "Coto Makassar",
+        "desc": "Makanan khas Sulawesi Selatan berupa sup daging sapi dengan kuah kental beraroma rempah yang kuat, disajikan dengan ketupat dan taburan bawang goreng."
+      }
     }
   },
   "Footer": {

@@ -259,6 +259,14 @@
         "title": "Ayam Tangkap",
         "desc": "A signature Acehnese deep-fried chicken dish tossed and fried with aromatic herbs like curry leaves and young pandan leaves."
       }
+    },
+    "sulawesi":{
+      "title": "Richness of Sulawesi Cuisine",
+      "subtitle": "Deliciousness of traditional spices from the Island of Paradise",
+      "makanan1": {
+        "title": "Coto Makassar",
+        "desc": "A traditional dish from South Sulawesi, it is a beef soup with a thick, aromatic broth, served with compressed rice and fried shallots."
+    }
     }
   },
   "Footer": {

@@ -20,7 +20,7 @@ import { ThemeToggleButton } from "@/components/ui/skiper-ui/skiper26";
 type ImageItem = string | { src: string; alt?: string };
 
 interface RegionGalleryPageProps {
-  regionKey: "bali" | "jawa" | "kalimantan" | "maluku" | "sumatera";
+  regionKey: "bali" | "jawa" | "kalimantan" | "maluku" | "sumatera" | "sulawesi";
   images: ImageItem[];
 }
 
