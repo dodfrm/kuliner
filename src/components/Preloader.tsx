@@ -247,7 +247,7 @@ function StairsPreloader({
         >
           <BlurText
             text={loadingText}
-            className="text-white text-2xl md:text-4xl font-extrabold uppercase tracking-[0.25em] text-center justify-center font-sans"
+            className="text-white text-2xl md:text-4xl font-extrabold capitalize text-center justify-center"
             delay={40}
             animateBy="letters"
             direction="top"
@@ -268,7 +268,7 @@ function StairsPreloader({
 
       {/* Percentage text at bottom-right */}
       <div
-        className="absolute bottom-4 right-8 z-20 font-mono text-white/70 font-semibold select-none flex items-baseline gap-0.5"
+        className="absolute bottom-4 right-8 z-20 text-white/70 font-semibold select-none flex items-baseline gap-0.5"
         style={{ opacity: textOpacity, transition: "opacity 0.4s ease" }}
       >
         <span className="text-2xl md:text-3xl font-black text-white">{Math.floor(progress)}</span>
@@ -397,7 +397,7 @@ function CirclePreloader({
       </div>
       {loadingText && (
         <p
-          className={`text-white/40 text-xs tracking-[0.25em] uppercase font-mono ${textClassName}`}
+          className={`text-white/40 text-xs tracking-[0.25em] capitalize ${textClassName}`}
           style={{ opacity: textOpacity, transition: "opacity 0.3s ease" }}
         >
           {loadingText}
