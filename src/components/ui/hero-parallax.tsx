@@ -337,7 +337,7 @@ const CarouselCard = React.memo(function CarouselCard({
 
         <div className="flex items-center justify-between border-t border-neutral-100 dark:border-neutral-800/60 pt-3 mt-3">
           <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider text-neutral-400 dark:text-neutral-500">
-            {locale === "en" ? "Archipelago Culinary" : "Kuliner Nusantara"}
+            {locale === "en" ? "Indonesian Culinary Delights" : "Kuliner Nusantara"}
           </span>
           <span className="flex items-center text-xs font-bold text-[#ff4500] group-hover:translate-x-1 transition-transform duration-300">
             {locale === "en" ? "Watch Video" : "Tonton Video"}
