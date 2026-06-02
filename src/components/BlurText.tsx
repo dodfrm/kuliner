@@ -14,6 +14,8 @@ type BlurTextProps = {
   easing?: Easing | Easing[];
   onAnimationComplete?: () => void;
   stepDuration?: number;
+  highlightText?: string;
+  highlightColor?: string;
 };
 
 const buildKeyframes = (
@@ -41,7 +43,9 @@ const BlurText: React.FC<BlurTextProps> = ({
   animationTo,
   easing = (t: number) => t,
   onAnimationComplete,
-  stepDuration = 0.35
+  stepDuration = 0.35,
+  highlightText = '',
+  highlightColor
 }) => {
   const elements = animateBy === 'words' ? text.split(' ') : text.split('');
   const [inView, setInView] = useState(false);
@@ -80,6 +84,31 @@ const BlurText: React.FC<BlurTextProps> = ({
     [direction]
   );
 
+  const highlightRanges = useMemo(() => {
+    if (!highlightText || !text) return [];
+    const lowerText = text.toLowerCase();
+    const lowerHighlight = highlightText.toLowerCase();
+    const ranges: { start: number; end: number }[] = [];
+    let idx = lowerText.indexOf(lowerHighlight);
+    while (idx !== -1) {
+      ranges.push({ start: idx, end: idx + lowerHighlight.length });
+      idx = lowerText.indexOf(lowerHighlight, idx + 1);
+    }
+    return ranges;
+  }, [text, highlightText]);
+
+  const wordStartIndices = useMemo(() => {
+    if (animateBy !== 'words' || !text) return [];
+    const words = text.split(' ');
+    const indices: number[] = [];
+    let currentIdx = 0;
+    for (let i = 0; i < words.length; i++) {
+      indices.push(currentIdx);
+      currentIdx += words[i].length + 1; // +1 for space
+    }
+    return indices;
+  }, [text, animateBy]);
+
   const fromSnapshot = animationFrom ?? defaultFrom;
   const toSnapshots = animationTo ?? defaultTo;
 
@@ -99,6 +128,17 @@ const BlurText: React.FC<BlurTextProps> = ({
           ease: easing
         };
 
+        const isHighlighted = (() => {
+          if (highlightRanges.length === 0) return false;
+          if (animateBy === 'letters') {
+            return highlightRanges.some(r => index >= r.start && index < r.end);
+          } else {
+            const wordStart = wordStartIndices[index];
+            const wordEnd = wordStart + elements[index].length;
+            return highlightRanges.some(r => Math.max(wordStart, r.start) < Math.min(wordEnd, r.end));
+          }
+        })();
+
         return (
           <motion.span
             key={index}
@@ -108,7 +148,8 @@ const BlurText: React.FC<BlurTextProps> = ({
             onAnimationComplete={index === elements.length - 1 ? onAnimationComplete : undefined}
             style={{
               display: 'inline-block',
-              willChange: 'transform, filter, opacity'
+              willChange: 'transform, filter, opacity',
+              color: isHighlighted ? highlightColor : undefined
             }}
           >
             {segment === ' ' ? '\u00A0' : segment}

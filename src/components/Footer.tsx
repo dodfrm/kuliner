@@ -75,7 +75,7 @@ export default function Footer() {
           <div className="lg:col-span-4 flex flex-col space-y-6">
             <div className="flex items-center space-x-2">
               <span className="text-2xl font-black tracking-tight text-neutral-900 dark:text-white">
-                Kuliner<span className="text-red-600 dark:text-red-500">In</span>
+                Kuliner<span className="text-[#ff4500]">In</span>
               </span>
             </div>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed max-w-sm">

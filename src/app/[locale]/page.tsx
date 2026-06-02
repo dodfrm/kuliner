@@ -236,7 +236,7 @@ const HeroSection = () => {
           <span className="inline-flex min-h-[1.2em] items-center">
             <RotatingText
               texts={[t("pedas"), t("manis"), t("gurih"), t("asam")]}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-none text-black dark:text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+              mainClassName="px-2 sm:px-2 md:px-3 bg-none text-[#ff4500] overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
               staggerDuration={0.03}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -276,8 +276,13 @@ const FlowingMenus = () => {
   return (
     <div className="bg-white dark:bg-neutral-950 py-16 border-t border-neutral-100 dark:border-neutral-800/80 transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10 z-10 relative">
-        <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-400 bg-clip-text text-transparent">
-          {t("title")}
+        <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl">
+          <span className="bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-400 bg-clip-text text-transparent">
+            {t("title").split(" ").slice(0, -1).join(" ")}
+          </span>{" "}
+          <span className="text-[#ff4500]">
+            {t("title").split(" ").slice(-1)[0]}
+          </span>
         </h2>
         <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-center max-w-lg mx-auto text-sm sm:text-base">
           {t("subtitle")}
@@ -310,8 +315,13 @@ const TeamSection = () => {
 
       {/* Header */}
       <div className="relative w-full max-w-5xl z-10 flex flex-col items-center text-center mb-16">
-        <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-400 bg-clip-text text-transparent">
-          {t("title")}
+        <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl">
+          <span className="bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-400 bg-clip-text text-transparent">
+            {t("title").split(" ").slice(0, -1).join(" ")}
+          </span>{" "}
+          <span className="text-[#ff4500]">
+            {t("title").split(" ").slice(-1)[0]}
+          </span>
         </h2>
         <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-center max-w-lg mx-auto text-sm sm:text-base">
           {t("subtitle")}

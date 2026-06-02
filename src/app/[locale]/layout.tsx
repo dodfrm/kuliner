@@ -51,11 +51,14 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Preloader 
-          variant="stairs" 
-          position="fixed" 
-          zIndex={9999}
-          bgColor="#18181b"
-          loadingText="Udah Makan Belum?" />
+            variant="stairs" 
+            position="fixed" 
+            zIndex={9999}
+            bgColor="#18181b"
+            loadingText="Udah Makan Belum?"
+            highlightText="makan"
+            highlightColor="#ff4500"
+          />
           <ThemeProvider attribute="class" enableSystem>
             {children}
             <SpringMouseFollow global />

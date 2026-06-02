@@ -58,6 +58,8 @@ export interface PreloaderProps {
   customContent?: (progress: number) => ReactNode;
   className?: string;
   children?: ReactNode;
+  highlightText?: string;
+  highlightColor?: string;
 }
 
 // ─── Hook: useReducedMotion ───────────────────────────────────────────────────
@@ -158,6 +160,8 @@ interface StairsInternalProps {
   phase: Phase;
   useAnimation: boolean;
   isTextFadingOut: boolean;
+  highlightText?: string;
+  highlightColor?: string;
 }
 
 function StairsPreloader({
@@ -172,6 +176,8 @@ function StairsPreloader({
   phase,
   useAnimation,
   isTextFadingOut,
+  highlightText,
+  highlightColor,
 }: StairsInternalProps) {
   const strips = Array.from({ length: stairCount }, (_, i) => i);
 
@@ -251,6 +257,8 @@ function StairsPreloader({
             delay={40}
             animateBy="letters"
             direction="top"
+            highlightText={highlightText}
+            highlightColor={highlightColor}
           />
         </div>
       )}
@@ -482,6 +490,8 @@ export function Preloader({
   customContent,
   className = "",
   children,
+  highlightText,
+  highlightColor,
 }: PreloaderProps) {
   const resolvedBg = bgColor ?? "#0a0a0a";
 
@@ -689,6 +699,8 @@ export function Preloader({
                   phase={phase}
                   useAnimation={useAnimation}
                   isTextFadingOut={isTextFadingOut}
+                  highlightText={highlightText}
+                  highlightColor={highlightColor}
                 />
               )}
               {variant === "percentage" && (

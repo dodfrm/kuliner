@@ -112,7 +112,7 @@ export const Header = () => {
           <span className="inline-flex min-h-[1.2em] items-center">
             <RotatingText
               texts={[t("pedas"), t("manis"), t("gurih"), t("asam")]}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-none text-[#f86015] overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+              mainClassName="px-2 sm:px-2 md:px-3 bg-none text-[#ff4500] overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
               staggerDuration={0.03}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}

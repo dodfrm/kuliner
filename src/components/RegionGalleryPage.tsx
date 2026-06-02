@@ -97,8 +97,13 @@ export default function RegionGalleryPage({ regionKey, images }: RegionGalleryPa
 
       {/* Region Title & Subtitle */}
       <div className="relative z-10 text-center pt-32 px-4 select-none pointer-events-none">
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-2 bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent">
-          {t(`${regionKey}.title`)}
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-2">
+          <span className="bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent">
+            {t(`${regionKey}.title`).split(" ").slice(0, -1).join(" ")}
+          </span>{" "}
+          <span className="text-[#ff4500]">
+            {t(`${regionKey}.title`).split(" ").slice(-1)[0]}
+          </span>
         </h1>
         <p className="text-xs sm:text-sm text-neutral-400 font-light max-w-xl mx-auto">
           {t(`${regionKey}.subtitle`)}
