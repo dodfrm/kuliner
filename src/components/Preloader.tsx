@@ -79,17 +79,34 @@ function useReducedMotion(): boolean {
 function useProgress(
   active: boolean,
   duration: number,
+  allImagesLoaded: boolean,
   onComplete?: () => void
 ): number {
   const [progress, setProgress] = useState(0);
   const rafRef = useRef<number | null>(null);
   const startRef = useRef<number | null>(null);
+  
+  const allImagesLoadedRef = useRef(allImagesLoaded);
+  useEffect(() => {
+    allImagesLoadedRef.current = allImagesLoaded;
+  }, [allImagesLoaded]);
 
   const tick = useCallback(
     (ts: number) => {
       if (!startRef.current) startRef.current = ts;
-      const pct = Math.min(((ts - startRef.current) / duration) * 100, 100);
+      const elapsed = ts - startRef.current;
+      let targetPct = (elapsed / duration) * 100;
+
+      // Hold at 90% if images have not finished loading
+      if (!allImagesLoadedRef.current && targetPct >= 90) {
+        targetPct = 90;
+        // Keep adjusting startRef so it resumes smoothly from 90% when loaded
+        startRef.current = ts - (90 / 100) * duration;
+      }
+
+      const pct = Math.min(targetPct, 100);
       setProgress(pct);
+      
       if (pct < 100) {
         rafRef.current = requestAnimationFrame(tick);
       } else {
@@ -106,7 +123,6 @@ function useProgress(
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       return;
     }
-    startRef.current = null;
     rafRef.current = requestAnimationFrame(tick);
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -488,6 +504,69 @@ export function Preloader({
   // For non-stairs variants
   const [isExiting, setIsExiting] = useState(false);
   const [isTextFadingOut, setIsTextFadingOut] = useState(false);
+  const [allImagesLoaded, setAllImagesLoaded] = useState(true);
+
+  useEffect(() => {
+    if (!resolvedLoading) {
+      setAllImagesLoaded(true);
+      return;
+    }
+
+    setAllImagesLoaded(false);
+
+    let active = true;
+    let timeoutId: ReturnType<typeof setTimeout>;
+
+    // Wait a brief moment for DOM changes to complete and images to mount
+    const scanTimer = setTimeout(() => {
+      if (!active) return;
+
+      const images = Array.from(document.querySelectorAll("img"));
+      const pending = images.filter((img) => {
+        // Skip images inside the preloader container
+        if (img.closest("[role='status']")) return false;
+        return !img.complete && img.src;
+      });
+
+      if (pending.length === 0) {
+        setAllImagesLoaded(true);
+        return;
+      }
+
+      let loadedCount = 0;
+      const total = pending.length;
+
+      const handleImageLoad = () => {
+        if (!active) return;
+        loadedCount++;
+        if (loadedCount >= total) {
+          setAllImagesLoaded(true);
+        }
+      };
+
+      pending.forEach((img) => {
+        if (img.complete) {
+          handleImageLoad();
+        } else {
+          img.addEventListener("load", handleImageLoad, { once: true });
+          img.addEventListener("error", handleImageLoad, { once: true });
+        }
+      });
+
+      // Safety timeout: 7 seconds max wait to prevent getting stuck
+      timeoutId = setTimeout(() => {
+        if (active) {
+          setAllImagesLoaded(true);
+        }
+      }, 7000);
+    }, 100);
+
+    return () => {
+      active = false;
+      clearTimeout(scanTimer);
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [pathname, resolvedLoading]);
 
   const prefersReduced = useReducedMotion();
   const useAnimation = !(respectReducedMotion && prefersReduced);
@@ -538,6 +617,7 @@ export function Preloader({
   const progress = useProgress(
     resolvedLoading && isVisible && (variant !== "stairs" || phase === "hold"),
     duration,
+    allImagesLoaded,
     handleProgressComplete
   );
 
