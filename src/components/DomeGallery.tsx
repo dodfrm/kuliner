@@ -992,7 +992,7 @@ export default function DomeGallery({
       flex-direction: column;
       align-items: center;
       gap: 16px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: var(--font-sans);
     }
     
     .lightbox-back-title {
