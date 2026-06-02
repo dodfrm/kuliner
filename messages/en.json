@@ -1,6 +1,7 @@
 {
   "Navbar": {
-    "features": "Features",
+    "home": "Home",
+    "experience": "Experience",
     "explore": "Explore",
     "team": "Our Team",
     "indonesian": "Indonesia",
@@ -318,5 +319,41 @@
   "DomeGallery": {
     "frontHint": "Click the image to see the description",
     "backHint": "Click to view the image again"
+  },
+  "Testimonials": {
+    "title": "Culinary Experience",
+    "subtitle": "What food lovers say about their journey through the rich tastes of Indonesian cuisine.",
+    "buttonAdd": "Share Experience",
+    "formTitle": "Share Culinary Journey",
+    "formSubtitle": "Write down your favorite culinary memory and let other foodies explore it.",
+    "labelName": "Your Name",
+    "labelRole": "Profession",
+    "labelDish": "Favorite Dish",
+    "labelQuote": "Your Review",
+    "buttonSubmit": "Publish Review",
+    "buttonCancel": "Cancel",
+    "placeholderName": "Sarah Chen",
+    "placeholderRole": "Food Blogger",
+    "placeholderDish": "Rendang Padang in West Sumatra",
+    "placeholderQuote": "The blend of spices was incredible, slow-cooked to perfection. Absolutely unforgettable!",
+    "toastSuccess": "Experience shared successfully!",
+    "default1": {
+      "quote": "Sop Konro in Makassar is absolutely amazing; the rich spices penetrate deep into the tender beef bones.",
+      "author": "Andi Pratama",
+      "role": "Culinary Nomad",
+      "company": "Sop Konro Makassar"
+    },
+    "default2": {
+      "quote": "Enjoying warm Gudeg in the morning in Jogja with spicy krecek is the ultimate flavor harmony.",
+      "author": "Dewi Sartika",
+      "role": "Sweet Taste Lover",
+      "company": "Gudeg Jogja"
+    },
+    "default3": {
+      "quote": "Rendang Padang slow-cooked for hours. The meat is extremely tender, the coconut milk caramelized beautifully.",
+      "author": "Faisal Reza",
+      "role": "Spice Lover",
+      "company": "Rendang Minang"
+    }
   }
 }

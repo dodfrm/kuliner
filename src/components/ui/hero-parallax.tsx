@@ -107,16 +107,16 @@ export const Header = () => {
   const t = useTranslations("Home");
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-30 px-4 w-full left-0 top-0">
-      <h1 className="text-5xl md:text-7xl font-bold dark:text-white">
+      <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white">
           <span className="text-black dark:text-white">{t("sukaMakan")}</span>
           <span className="inline-flex min-h-[1.2em] items-center">
             <RotatingText
               texts={[t("pedas"), t("manis"), t("gurih"), t("asam")]}
               mainClassName="px-2 sm:px-2 md:px-3 bg-none text-[#ff4500] overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
               staggerDuration={0.03}
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-120%" }}
+              initial={{ y: "100%", opacity: 1 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "-120%", opacity: 1 }}
               staggerFrom="first"
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
               rotationInterval={3200}
@@ -124,7 +124,7 @@ export const Header = () => {
             />
           </span>
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8">
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-black dark:text-white">
           {t("description")}
       </p>
     </div>

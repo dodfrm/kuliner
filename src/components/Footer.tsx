@@ -30,7 +30,9 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { name: tNav("features"), link: "#explore" },
+    { name: tNav("home"), link: "#home" },
+    { name: tNav("explore"), link: "#explore" },
+    { name: tNav("experience"), link: "#experience" },
     { name: tNav("team"), link: "#team" },
   ];
 

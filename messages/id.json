@@ -1,6 +1,7 @@
 {
   "Navbar": {
-    "features": "Fitur",
+    "home": "Beranda",
+    "experience": "Pengalaman",
     "explore": "Jelajahi",
     "team": "Tim Kami",
     "indonesian": "Indonesia",
@@ -316,5 +317,41 @@
   "DomeGallery": {
     "frontHint": "Klik gambar untuk melihat deskripsi",
     "backHint": "Klik untuk melihat gambar kembali"
+  },
+  "Testimonials": {
+    "title": "Pengalaman Kuliner",
+    "subtitle": "Apa kata sesama pencinta makanan tentang perjalanan kuliner mereka menikmati cita rasa Nusantara.",
+    "buttonAdd": "Bagikan Pengalaman",
+    "formTitle": "Bagikan Cerita Kulinermu",
+    "formSubtitle": "Tuliskan memori kuliner favoritmu dan biarkan pencinta makanan lainnya ikut merasakannya.",
+    "labelName": "Nama Anda",
+    "labelRole": "Profesi Anda",
+    "labelDish": "Makanan Favorit Anda",
+    "labelQuote": "Ulasan",
+    "buttonSubmit": "Publikasikan Ulasan",
+    "buttonCancel": "Batal",
+    "placeholderName": "Andi Pratama",
+    "placeholderRole": "Food Blogger / Penikmat Kuliner",
+    "placeholderDish": "Rendang Padang di Sumatera Barat",
+    "placeholderQuote": "Perpaduan rempahnya luar biasa, dimasak lambat hingga sempurna. Benar-benar tidak terlupakan!",
+    "toastSuccess": "Pengalaman berhasil dibagikan!",
+    "default1": {
+      "quote": "Sop Konro di Makassar benar-benar luar biasa; rempahnya yang kaya meresap hingga ke dalam tulang sapi yang empuk.",
+      "author": "Andi Pratama",
+      "role": "Pengelana Kuliner",
+      "company": "Sop Konro Makassar"
+    },
+    "default2": {
+      "quote": "Menikmati Gudeg hangat di pagi hari di Jogja dengan krecek pedas adalah harmoni rasa manis-pedas terbaik.",
+      "author": "Dewi Sartika",
+      "role": "Pecinta Rasa Manis",
+      "company": "Gudeg Jogja"
+    },
+    "default3": {
+      "quote": "Rendang Padang yang dimasak berjam-jam. Dagingnya sangat lembut, santannya terkaramelisasi dengan indah.",
+      "author": "Faisal Reza",
+      "role": "Pecinta Rempah",
+      "company": "Rendang Minang"
+    }
   }
 }

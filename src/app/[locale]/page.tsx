@@ -18,6 +18,7 @@ import { Link } from "@/i18n/routing";
 import RotatingText from "@/components/RotatingText";
 import { motion } from "motion/react";
 import { HeroParallax } from "@/components/ui/hero-parallax";
+import { Testimonial } from "@/components/ui/design-testimonial";
 import Footer from "@/components/Footer";
 import { useTheme } from "next-themes";
 import { ThemeToggleButton } from "@/components/ui/skiper-ui/skiper26";
@@ -37,12 +38,16 @@ export default function Home() {
    
   const navItems = [
     {
-      name: t("features"),
-      link: "#features",
+      name: t("home"),
+      link: "#home",
     },
     {
       name: t("explore"),
       link: "#explore",
+    },
+    {
+      name: t("experience"),
+      link: "#experience",
     },
     {
       name: t("team"),
@@ -53,7 +58,7 @@ export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   return (
-    <div className="relative w-full bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-50 min-h-screen selection:bg-teal-500 selection:text-white scroll-smooth transition-colors duration-300">
+    <div className="relative w-full bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 min-h-screen selection:bg-teal-500 selection:text-white scroll-smooth transition-colors duration-300">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
@@ -84,7 +89,7 @@ export default function Home() {
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300 py-1"
+                className="relative text-neutral-600 dark:text-neutral-100 py-1"
               >
                 <span className="block">{item.name}</span>
               </Link>
@@ -104,6 +109,9 @@ export default function Home() {
       <HeroParallax products={products} />
       <div id="explore">
         <FlowingMenus />
+      </div>
+      <div id="experience">
+        <Testimonial />
       </div>
       <div id="team">
         <TeamSection />
@@ -209,59 +217,6 @@ export const products = [
   },
 ];
 
-const HeroSection = () => {
-  const t = useTranslations("Home");
-
-  return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-neutral-950 transition-colors duration-300">
-      {/* Subtle light background grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30 pointer-events-none" />
-      
-      {/* Soft ambient light background glows */}
-      <div className="absolute top-1/4 left-1/4 w-[350px] h-[350px] bg-teal-200/20 dark:bg-teal-900/10 rounded-full blur-[100px] pointer-events-none animate-pulse" style={{ animationDuration: '8s' }} />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-orange-200/20 dark:bg-orange-900/10 rounded-full blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: '12s' }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-100/10 dark:bg-indigo-950/10 rounded-full blur-[130px] pointer-events-none" />
-
-      {/* Hero content container */}
-      <div className="relative z-10 max-w-5xl text-center flex flex-col items-center">
-
-        {/* Heading on a single wrapping line */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="flex flex-row flex-wrap items-center justify-center gap-x-3 text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral-50 mb-6 text-center leading-[1.1]"
-        >
-          <span className="text-neutral-500">{t("sukaMakan")}</span>
-          <span className="inline-flex min-h-[1.2em] items-center">
-            <RotatingText
-              texts={[t("pedas"), t("manis"), t("gurih"), t("asam")]}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-none text-[#ff4500] overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
-              staggerDuration={0.03}
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-120%" }}
-              staggerFrom="first"
-              transition={{ type: "spring", damping: 30, stiffness: 400 }}
-              rotationInterval={3200}
-              splitBy="characters"
-            />
-          </span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-4 text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl leading-relaxed font-normal"
-        >
-          {t("description")}
-        </motion.p>
-      </div>
-    </section>
-  );
-};
-
 const FlowingMenus = () => {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -277,7 +232,7 @@ const FlowingMenus = () => {
     <div className="bg-white dark:bg-neutral-950 py-16 border-t border-neutral-100 dark:border-neutral-800/80 transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10 z-10 relative">
         <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl">
-          <span className="bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-100 bg-clip-text text-transparent">
             {t("title").split(" ").slice(0, -1).join(" ")}
           </span>{" "}
           <span className="text-[#ff4500]">
@@ -316,7 +271,7 @@ const TeamSection = () => {
       {/* Header */}
       <div className="relative w-full max-w-5xl z-10 flex flex-col items-center text-center mb-16">
         <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 dark:text-white sm:text-5xl">
-          <span className="bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-b from-neutral-950 to-neutral-700 dark:from-white dark:to-neutral-100 bg-clip-text text-transparent">
             {t("title").split(" ").slice(0, -1).join(" ")}
           </span>{" "}
           <span className="text-[#ff4500]">
